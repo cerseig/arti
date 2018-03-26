@@ -1,0 +1,21 @@
+/* ----- Import files in BASE folder ----- */
+@import 'base/colors';
+@import 'base/typo';
+@import 'base/reset';
+
+// /* ----- Import files in COMPONENTS folder ----- */
+// @import 'components/*';
+//
+// /* ----- Import files in HELPERS folder ----- */
+// @import 'helpers/*';
+
+/* ----- Import files in LAYOUT folder ----- */
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/navigation';
+
+// /* ----- Import files in PAGES folder ----- */
+// @import 'pages/*';
+//
+// /* ----- Import files in VENDORS folder ----- */
+// @import 'vendors/*';

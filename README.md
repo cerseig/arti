@@ -1,1 +1,2 @@
-# arti
+# ARTI
+Run serve : gulp watch

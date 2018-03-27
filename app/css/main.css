@@ -61,5 +61,17 @@ html {
       background-image: linear-gradient(transparent 85%, #521DCF 15%);
       background-size: 15px 15px; }
 
-.loader__counter {
-  font-family: 'ibm_plex_monoregular'; }
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; }
+  .loader__counter {
+    font-family: 'ibm_plex_monomedium';
+    font-size: 25px; }
+
+.landing {
+  display: none;
+  align-items: center;
+  justify-content: center; }

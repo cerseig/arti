@@ -14,8 +14,9 @@
 @import 'layout/header';
 @import 'layout/navigation';
 
-// /* ----- Import files in PAGES folder ----- */
-// @import 'pages/*';
-//
+/* ----- Import files in PAGES folder ----- */
+@import 'pages/global';
+@import 'pages/loader';
+
 // /* ----- Import files in VENDORS folder ----- */
 // @import 'vendors/*';

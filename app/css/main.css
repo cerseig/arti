@@ -1,4 +1,46 @@
 /* ----- Import files in BASE folder ----- */
+@font-face {
+  font-family: 'ibm_plex_monobold';
+  src: url("../fonts/ibm-plex-mono/ibmplexmono-bold-webfont.woff2") format("woff2"), url("../fonts/ibm-plex-mono/ibmplexmono-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ibm_plex_monoextralight';
+  src: url("../fonts/ibm-plex-mono/ibmplexmono-extralight-webfont.woff2") format("woff2"), url("../fonts/ibm-plex-mono/ibmplexmono-extralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ibm_plex_monolight';
+  src: url("../fonts/ibm-plex-mono/ibmplexmono-light-webfont.woff2") format("woff2"), url("../fonts/ibm-plex-mono/ibmplexmono-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ibm_plex_monomedium';
+  src: url("../fonts/ibm-plex-mono/ibmplexmono-medium-webfont.woff2") format("woff2"), url("../fonts/ibm-plex-mono/ibmplexmono-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ibm_plex_monoregular';
+  src: url("../fonts/ibm-plex-mono/ibmplexmono-regular-webfont.woff2") format("woff2"), url("../fonts/ibm-plex-mono/ibmplexmono-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ibm_plex_monosemibold';
+  src: url("../fonts/ibm-plex-mono/ibmplexmono-semibold-webfont.woff2") format("woff2"), url("../fonts/ibm-plex-mono/ibmplexmono-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ibm_plex_monothin';
+  src: url("../fonts/ibm-plex-mono/ibmplexmono-thin-webfont.woff2") format("woff2"), url("../fonts/ibm-plex-mono/ibmplexmono-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -6,3 +48,13 @@ html, body {
   height: 100%; }
 
 /* ----- Import files in LAYOUT folder ----- */
+/* ----- Import files in PAGES folder ----- */
+body {
+  background: #051952; }
+  body main {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #521DCF 0%, rgba(44, 52, 160, 0) 100%); }
+
+.loader__counter {
+  font-family: 'ibm_plex_monoregular'; }

@@ -29,26 +29,7 @@
     </main>
 
     <script src="js/lib/jquery-3.1.1.min.js"></script>
-    <script src="js/app.js"></script>
-    <script type="text/javascript">
-
-    $('.loader__counter').each(function () {
-      $(this).prop('Counter',0).animate({
-          Counter: $(this).text()
-      }, {
-          duration: 2000,
-          easing: 'swing',
-          step: function (now) {
-              $(this).text(Math.ceil(now));
-          }
-      });
-    });
-
-    setTimeout(function () {
-      $('.loader').fadeOut();
-    }, 2000);
-
-    </script>
+    <script src="js/app.js" type="module"></script>
 
   </body>
 </html>

@@ -7,6 +7,19 @@ let gulp = require('gulp')
     uglify = require('gulp-uglify')
     minifyCss = require('gulp-cssmin')
     rename = require('gulp-rename')
+    babel = require('gulp-babel')
+    sourcemaps = require('gulp-sourcemaps')
+    concat = require('gulp-concat')
+
+
+gulp.task('js', function () {
+  return gulp.src('app/js/**/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(concat('main.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('app/js'))
+});
 
 gulp.task('sass', () => {
   return gulp.src('app/scss/**/*.scss')
@@ -21,15 +34,15 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('dist/css'))
 })
 
-gulp.task('js', () => {
-  return gulp.src('app/js/**/*.js')
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('dist/js'))
-    .pipe(browserSync.reload({
-      stream:true
-    }))
-})
+// gulp.task('js', () => {
+//   return gulp.src('app/js/**/*.js')
+//     .pipe(uglify())
+//     .pipe(rename({suffix: '.min'}))
+//     .pipe(gulp.dest('dist/js'))
+//     .pipe(browserSync.reload({
+//       stream:true
+//     }))
+// })
 
 gulp.task('browserSync', () => {
   browserSync({

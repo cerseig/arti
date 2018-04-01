@@ -1,0 +1,5 @@
+function loadArti() {
+
+}
+
+export {loadArti};

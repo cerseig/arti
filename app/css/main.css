@@ -47,6 +47,9 @@ html, body {
   width: 100%;
   height: 100%; }
 
+*:focus {
+  outline: none; }
+
 /* ----- Import files in LAYOUT folder ----- */
 /* ----- Import files in PAGES folder ----- */
 html {
@@ -74,4 +77,39 @@ html {
 .landing {
   display: none;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+  .landing__form {
+    position: relative; }
+    .landing__form input {
+      height: 50px;
+      width: 300px;
+      border: 5px solid #FC6D21;
+      border-radius: 5px;
+      background-color: #DBDAEB;
+      color: #423FE9;
+      font-family: "IBM Plex Mono";
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 25px;
+      padding-left: 20px; }
+      .landing__form input::placeholder {
+        color: #423FE9; }
+    .landing__form button {
+      background: none;
+      border: none;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%); }
+
+.load-arti {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 25px; }

@@ -19,10 +19,21 @@
       <section class="landing">
         <div class="landing__content">
             <form class="landing__form">
-                <label for="name">What's your name ?</label>
-                <br><input type="text" name="name" value="" id="name">
-                <button type="submit" style="display:none;"></button>
+                <input type="text" name="name" value="" id="name" placeholder="*Your name*">
+                <button type="button" id="submitName">
+                  <img src="images/icons/icon_enter.svg" alt="">
+                </button>
             </form>
+        </div>
+      </section>
+
+      <section class="load-arti">
+        <div class="load-arti__content">
+          <div class="load-arti__loader"></div>
+          <div class="load-arti__text">
+            <p>Initialisation de la matrice_</p>
+            <span class="load-arti__counter">100</span>%
+          </div>
         </div>
       </section>
 

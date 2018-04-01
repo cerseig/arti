@@ -1,5 +1,5 @@
-function loadArti() {
-
-}
-
 export {loadArti};
+
+function loadArti() {
+  
+}

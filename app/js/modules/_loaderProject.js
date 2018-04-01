@@ -12,8 +12,8 @@ function loadProject() {
         }
     });
   });
-
   setTimeout(function () {
-    $('.loader').fadeOut();
+    $('.loader').fadeOut()
+    $('.landing').css('display', 'flex')
   }, 2000);
 }

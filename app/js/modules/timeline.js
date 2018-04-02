@@ -152,24 +152,19 @@ function timeline(collection, options) {
         function setHeights() {
             let oddIndexTallest = 0;
             let evenIndexTallest = 0;
-            tl.items.forEach((item, i) => {
-                item.style.height = 'auto';
+            tl.items.forEach((item) => {
+                item.style.height = '500px';
+                // item.style.height = `${item.style.height + 350}px`;
+                // console.log(item.style.height)
                 const height = item.offsetHeight;
-                // if (i % 2 === 0) {
-                    evenIndexTallest = height > evenIndexTallest ? height : evenIndexTallest;
-                // } else {
-                //     oddIndexTallest = height > oddIndexTallest ? height : oddIndexTallest;
-                // }
+                // console.log("height", height)
+                evenIndexTallest = height > evenIndexTallest ? height : evenIndexTallest;
             });
-            tl.items.forEach((item, i) => {
-                // if (i % 2 === 0) {
-                    item.style.height = `${evenIndexTallest}px`;
-                // } else {
-                //     item.style.height = `${oddIndexTallest}px`;
-                //     item.style.transform = `translateY(${evenIndexTallest}px)`;
-                // }
+            tl.items.forEach((item) => {
+                item.style.height = `${evenIndexTallest}px`;
             });
-            tl.scroller.style.height = `${evenIndexTallest + oddIndexTallest}px`;
+            tl.scroller.style.height = `${evenIndexTallest + oddIndexTallest +400}px`;
+            console.log(evenIndexTallest, oddIndexTallest )
         }
 
         if (window.innerWidth > tl.forceVerticalMode) {
@@ -341,54 +336,3 @@ if (window.jQuery) {
         };
     })(window.jQuery);
 }
-// function initTimeline(itemNumber){
-//
-//     var container = document.getElementsByClassName('container')[0];
-//     console.log(container)
-//     var timelineline = document.createElement('div');
-//
-//     container.appendChild(timelineline)
-//     timelineline.className = 'timeline';
-//     // document.getElementsByTagName('body')[0].appendChild(timeline);
-//
-//     var timelineWrap = document.createElement('div');
-//     timelineWrap.className = 'timeline__wrap';
-//     timelineline.appendChild(timelineWrap);
-//
-//     var timelineItems = document.createElement('div');
-//     timelineItems.className = 'timeline__items';
-//     timelineWrap.appendChild(timelineItems);
-//
-//     //items
-//     for(var i=0; i<itemNumber; i++){
-//         var timelineItem = document.createElement('div');
-//         timelineItem.className = 'timeline__item';
-//         timelineItems.appendChild(timelineItem);
-//
-//         var timelineContent = document.createElement('div');
-//         timelineContent.className = 'timeline__content';
-//         timelineItem.appendChild(timelineContent);
-//
-//         var title = document.createElement('h2');
-//         title.innerHTML="2000";
-//         timelineContent.appendChild(title);
-//         var content = document.createElement('div');
-//         content.innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.";
-//         timelineItem.appendChild(content);
-//     }
-//
-//
-//     // timeline(document.querySelectorAll('.timeline'), {
-//     //     forceVerticalMode: 700,
-//     //     mode: 'horizontal',
-//     //     verticalStartPosition: 'left',
-//     //     visibleItems: 4
-//     // });
-//     //
-//     timeline(timelineline, {
-//         forceVerticalMode: 700,
-//         mode: 'horizontal',
-//         verticalStartPosition: 'left',
-//         visibleItems: 4
-//     });
-// }

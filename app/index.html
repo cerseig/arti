@@ -1,142 +1,289 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ARTI</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" type="image/png" href="images/icon/favicon.png" />
-  </head>
-  <body>
+    <link rel="icon" type="image/png" href="images/icon/favicon.png"/>
+</head>
+<body>
 
-    <main>
+<main>
 
-      <section class="loader">
+    <section class="loader">
         <div class="loader__text">_<span class="loader__counter">100</span>%</div>
-      </section>
+    </section>
 
-      <section class="landing">
+    <section class="landing">
         <div class="landing__content">
             <form class="landing__form">
                 <input type="text" name="name" value="" id="name" placeholder="*Your name*">
                 <button type="button" id="submitName">
-                  <img src="images/icons/icon_enter.svg" alt="">
+                    <img src="images/icons/icon_enter.svg" alt="">
                 </button>
             </form>
         </div>
-      </section>
+    </section>
 
-      <section class="load-arti">
+    <section class="load-arti">
         <div class="load-arti__content">
-          <div class="load-arti__loader"></div>
-          <div class="load-arti__text">
-            <p>Initialisation de la matrice_</p>
-            <span class="load-arti__counter">100</span>%
-          </div>
-        </div>
-      </section>
-
-      <section class="introduction">
-        <div class="introduction__content">
-          <div class="introduction__comment-1"></div>
-          <div class="introduction__comment-2"></div>
-          <div class="introduction__anwsers">
-            <ul>
-              <li class="introduction__anwsers-1"></li>
-              <li class="introduction__anwsers-2"></li>
-              <li class="introduction__anwsers-3"></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section" style="position:relative;top: 70%; transform: translateY(-70%)">
-          <div class="container" >
-            <div class="timeline">
-              <div class="timeline__wrap">
-                <div class="timeline__items">
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <div>
-                        <h2>2018</h2>
-                        <div class="img__container"><img src="img/close.svg" alt=""></div>
-                      </div>
-                      <p>Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
-                    </div>
-                  </div>
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <h2>2015</h2>
-                      <div class="img__container"><img src="img/close.svg" alt=""></div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
-                    </div>
-                  </div>
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <h2>2014</h2>
-                      <div class="img__container"><img src="img/close.svg" alt=""></div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
-                    </div>
-                  </div>
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <h2>2012</h2>
-                      <div class="img__container"><img src="img/close.svg" alt=""></div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
-                    </div>
-                  </div>
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <h2>2010</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus. Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                  </div>
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <h2>2007</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
-                    </div>
-                  </div>
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <h2>2004</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
-                    </div>
-                  </div>
-                  <div class="timeline__item">
-                    <div class="timeline__content">
-                      <h2>2002</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque condimentum lacus dapibus.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="load-arti__loader"></div>
+            <div class="load-arti__text">
+                <p>Initialisation de la matrice_</p>
+                <span class="load-arti__counter">100</span>%
             </div>
-          </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <section class="introduction">
+        <div class="introduction__content">
+            <div class="introduction__comment-1"></div>
+            <div class="introduction__comment-2"></div>
+            <div class="introduction__anwsers">
+                <ul>
+                    <li class="introduction__anwsers-1"></li>
+                    <li class="introduction__anwsers-2"></li>
+                    <li class="introduction__anwsers-3"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-    <script src="js/lib/jquery-3.1.1.min.js"></script>
-    <script src="js/modules/timeline.js"></script>
-    <script src="js/app.js" type="module"></script>
-    <script type="text/javascript">
+    <section class="page-section" style="position:relative;top: 70%; transform: translateY(-70%)">
+        <div class="container">
+            <div class="timeline">
+                <div class="timeline__wrap">
+                    <div class="timeline__items">
+                        <div class="timeline__item">
+                            <div class="timeline__content">
+                                <div class="timeline__content__header">
+                                    <h2>2018</h2>
+                                    <div class="img__container">
+                                        <img src="images/icons/icon_close.svg" alt=""></div>
+                                </div>
+                                <div class="timeline__content__body">
+                                    <img src="images/movies/oz_SummerWars.jpg" alt="">
+                                    <p>Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
+                                        condimentum lacus dapibus.</p>
+                                </div>
 
-        timeline(document.querySelectorAll('.timeline'), {
-            forceVerticalMode: 700,
-            mode: 'horizontal',
-            verticalStartPosition: 'left',
-            visibleItems: 4
-        });
+                                <div class="timeline__content__bottom">
+                                    <div class="timeline__content__bottom__container">
+                                        <div class="more_container">
+                                            <img src="images/icons/icon_more.svg" alt="" class="more">
+                                        </div>
+                                        <div class="web_container">
+                                            <img src="images/icons/icon_web.svg" alt="" class="web">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content">
+                                <div class="timeline__content__header">
+                                    <h2>2018</h2>
+                                    <div class="img__container">
+                                        <img src="images/icons/icon_close.svg" alt=""></div>
+                                </div>
+                                <div class="timeline__content__body">
+                                    <img src="images/movies/oz_SummerWars.jpg" alt="">
+                                    <p>Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
+                                        condimentum lacus dapibus.</p>
+                                </div>
+                                <div class="timeline__content__bottom">
+                                    <div class="timeline__content__bottom__container">
+                                        <div class="more_container">
+                                            <img src="images/icons/icon_more.svg" alt="" class="more">
+                                        </div>
+                                        <div class="web_container">
+                                            <img src="images/icons/icon_web.svg" alt="" class="web">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content">
+                                <div class="timeline__content__header">
+                                    <h2>2018</h2>
+                                    <div class="img__container">
+                                        <img src="images/icons/icon_close.svg" alt=""></div>
+                                </div>
+                                <div class="timeline__content__body">
+                                    <img src="images/movies/oz_SummerWars.jpg" alt="">
+                                    <p>Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
+                                        condimentum lacus dapibus.</p>
+                                </div>
+
+                                <div class="timeline__content__bottom">
+                                    <div class="timeline__content__bottom__container">
+                                        <div class="more_container">
+                                            <img src="images/icons/icon_more.svg" alt="" class="more">
+                                        </div>
+                                        <div class="web_container">
+                                            <img src="images/icons/icon_web.svg" alt="" class="web">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content">
+                                <div class="timeline__content__header">
+                                    <h2>2018</h2>
+                                    <div class="img__container">
+                                        <img src="images/icons/icon_close.svg" alt=""></div>
+                                </div>
+                                <div class="timeline__content__body">
+                                    <img src="images/movies/oz_SummerWars.jpg" alt="">
+                                    <p>Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
+                                        condimentum lacus dapibus.</p>
+                                </div>
+                                <div class="timeline__content__bottom">
+                                    <div class="timeline__content__bottom__container">
+                                        <div class="more_container">
+                                            <img src="images/icons/icon_more.svg" alt="" class="more">
+                                        </div>
+                                        <div class="web_container">
+                                            <img src="images/icons/icon_web.svg" alt="" class="web">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content">
+                                <div class="timeline__content__header">
+                                    <h2>2018</h2>
+                                    <div class="img__container">
+                                        <img src="images/icons/icon_close.svg" alt=""></div>
+                                </div>
+                                <div class="timeline__content__body">
+                                    <img src="images/movies/oz_SummerWars.jpg" alt="">
+                                    <p>Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
+                                        condimentum lacus dapibus.</p>
+                                </div>
+                                <div class="timeline__content__bottom">
+                                    <div class="timeline__content__bottom__container">
+                                        <div class="more_container">
+                                            <img src="images/icons/icon_more.svg" alt="" class="more">
+                                        </div>
+                                        <div class="web_container">
+                                            <img src="images/icons/icon_web.svg" alt="" class="web">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content">
+                                <div class="timeline__content__header">
+                                    <h2>2018</h2>
+                                    <div class="img__container">
+                                        <img src="images/icons/icon_close.svg" alt=""></div>
+                                </div>
+                                <div class="timeline__content__body">
+                                    <img src="images/movies/oz_SummerWars.jpg" alt="">
+                                    <p>Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
+                                        condimentum lacus dapibus.</p>
+                                </div>
+                                <div class="timeline__content__bottom">
+                                    <div class="timeline__content__bottom__container">
+                                        <div class="more_container">
+                                            <img src="images/icons/icon_more.svg" alt="" class="more">
+                                        </div>
+                                        <div class="web_container">
+                                            <img src="images/icons/icon_web.svg" alt="" class="web">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content">
+                                <div class="timeline__content__header">
+                                    <h2>2018</h2>
+                                    <div class="img__container">
+                                        <img src="images/icons/icon_close.svg" alt=""></div>
+                                </div>
+                                <div class="timeline__content__body">
+                                    <img src="images/movies/oz_SummerWars.jpg" alt="">
+                                    <p>Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
+                                        condimentum lacus dapibus.</p>
+                                </div>
+                                <div class="timeline__content__bottom">
+                                    <div class="timeline__content__bottom__container">
+                                        <div class="more_container">
+                                            <img src="images/icons/icon_more.svg" alt="" class="more">
+                                        </div>
+                                        <div class="web_container">
+                                            <img src="images/icons/icon_web.svg" alt="" class="web">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__content">
+                                <div class="timeline__content__header">
+                                    <h2>2018</h2>
+                                    <div class="img__container">
+                                        <img src="images/icons/icon_close.svg" alt=""></div>
+                                </div>
+                                <div class="timeline__content__body">
+                                    <img src="images/movies/oz_SummerWars.jpg" alt="">
+                                    <p>Lorem
+                                        ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim neque
+                                        condimentum lacus dapibus.</p>
+                                </div>
+                                <div class="timeline__content__bottom">
+                                    <div class="timeline__content__bottom__container">
+                                        <div class="more_container">
+                                            <img src="images/icons/icon_more.svg" alt="" class="more">
+                                        </div>
+                                        <div class="web_container">
+                                            <img src="images/icons/icon_web.svg" alt="" class="web">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<script src="js/lib/jquery-3.1.1.min.js"></script>
+<script src="js/modules/timeline.js"></script>
+<script src="js/app.js" type="module"></script>
+<script type="text/javascript">
+
+    timeline(document.querySelectorAll('.timeline'), {
+        forceVerticalMode: 700,
+        mode: 'horizontal',
+        verticalStartPosition: 'left',
+        visibleItems: 4
+    });
 
 
-    </script>
+</script>
 
-  </body>
+</body>
 </html>

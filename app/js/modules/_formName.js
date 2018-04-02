@@ -1,3 +1,4 @@
+import {loadArti} from './_loaderArti.js';
 export {formValidName, getName}
 
 function formValidName() {
@@ -20,6 +21,7 @@ function getName() {
 }
 
 function hideFormName() {
-  $('.landing').fadeOut();
+  $('.landing').fadeOut()
   $('.load-arti').css('display', 'flex')
+  loadArti()
 }

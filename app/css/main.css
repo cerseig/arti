@@ -132,7 +132,7 @@ html {
   width: 50%;
   z-index: 2; }
   .timeline__item::after {
-    background-color: #FFF;
+    background-color: #DBDAEB;
     border: 4px solid #DDD;
     border-radius: 50%;
     content: '';
@@ -166,19 +166,16 @@ html {
     left: -12px; }
   .timeline__item--right .timeline__content::after {
     border-bottom: 9px solid transparent;
-    border-right: 11px solid #FFF;
+    border-right: 11px solid #DBDAEB;
     border-left: none;
     border-top: 9px solid transparent;
     left: -10px; }
 
 .timeline__content {
   top: -50px;
-  background-color: #FFF;
-  border: 5px solid #FC6D21;
   border-radius: 3px;
   color: #333;
   display: block;
-  padding: 20px;
   position: relative; }
   .timeline__content::before, .timeline__content::after {
     content: '';
@@ -199,21 +196,69 @@ html {
     border-top: 9px solid transparent;
     right: -10px;
     z-index: 2; }
-  .timeline__content h2 {
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0 0 10px;
-    display: inline-block; }
-  .timeline__content .img__container {
-    display: inline-block;
-    float: right; }
-    .timeline__content .img__container img {
-      width: 20px;
+  .timeline__content .timeline__content__header {
+    background-color: #DBDAEB;
+    border: 5px solid #FC6D21; }
+    .timeline__content .timeline__content__header h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 10px;
+      display: inline-block;
+      padding: 5px 13px; }
+    .timeline__content .timeline__content__header .img__container {
+      display: inline-block;
+      float: right;
+      padding: 13px;
+      border-left: 5px solid #FC6D21; }
+      .timeline__content .timeline__content__header .img__container img {
+        width: 20px;
+        height: auto; }
+  .timeline__content .timeline__content__body {
+    background-color: #DBDAEB;
+    border-left: 5px solid #FC6D21;
+    border-right: 5px solid #FC6D21;
+    border-bottom: 5px solid #FC6D21; }
+    .timeline__content .timeline__content__body img {
+      width: 100%;
       height: auto; }
+  .timeline__content .timeline__content__bottom {
+    text-align: right; }
+    .timeline__content .timeline__content__bottom .timeline__content__bottom__container {
+      background-color: #DBDAEB;
+      display: inline-block;
+      width: 84px;
+      border-left: 5px solid #FC6D21;
+      border-bottom: 5px solid #FC6D21;
+      border-right: 5px solid #FC6D21;
+      padding: 0px;
+      vertical-align: middle; }
+      .timeline__content .timeline__content__bottom .timeline__content__bottom__container .more_container {
+        vertical-align: middle;
+        float: left;
+        border-right: solid 2.5px #FC6D21;
+        width: 50%;
+        text-align: center;
+        padding: 6px; }
+        .timeline__content .timeline__content__bottom .timeline__content__bottom__container .more_container .more {
+          width: 100%;
+          height: auto; }
+      .timeline__content .timeline__content__bottom .timeline__content__bottom__container .web_container {
+        margin: 0;
+        vertical-align: middle;
+        width: 50%;
+        display: inline-block;
+        border-left: solid 2.5px #FC6D21;
+        text-align: center;
+        padding: 5px; }
+        .timeline__content .timeline__content__bottom .timeline__content__bottom__container .web_container .web {
+          padding: 0;
+          width: 100%;
+          height: auto; }
   .timeline__content p {
     font-size: 15px;
     line-height: 1.5;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    padding: 0 13px; }
 
 .timeline--horizontal {
   font-size: 0;
@@ -258,14 +303,14 @@ html {
       border-right: 12px solid #FC6D21;
       border-bottom: 12px solid #FC6D21;
       right: auto;
-      transform: translateX(-25px) rotate(182deg);
+      transform: translateX(0px) rotate(182deg);
       top: 100%; }
     .timeline--horizontal .timeline__item .timeline__content::after {
       border-left: 10px solid transparent;
-      border-right: 10px solid #FFF;
-      border-bottom: 10px solid #FFF;
+      border-right: 10px solid #DBDAEB;
+      border-bottom: 10px solid #DBDAEB;
       right: auto;
-      transform: translateX(-20px) rotate(182deg);
+      transform: translateX(0px) rotate(182deg);
       top: 97%; }
 
 .timeline-nav-button {
@@ -290,7 +335,7 @@ html {
   .timeline-nav-button::before {
     background-position: center center;
     background-repeat: no-repeat;
-    content: '';
+    content: '2018';
     display: block;
     height: 14px;
     left: 50%;

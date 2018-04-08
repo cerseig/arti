@@ -105,6 +105,9 @@ html {
       right: 20px;
       transform: translateY(-50%); }
 
+.page-section {
+  display: none; }
+
 .timeline {
   position: relative; }
   .timeline * {
@@ -405,23 +408,73 @@ html {
   width: 100%;
   height: 100%;
   display: none; }
+  .introduction__content {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .introduction__arti {
+    width: 100%;
+    height: 300px;
+    position: relative; }
   .introduction__comment-1 {
-    width: 300px;
+    width: 200px;
     border: 5px solid #FC6D21;
     border-radius: 5px;
     background-color: #DBDAEB;
     padding: 20px;
     color: #423FE9;
     font-family: "IBM Plex Mono";
-    font-size: 18px;
-    font-weight: 600; }
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    left: 0; }
   .introduction__comment-2 {
     border: 5px solid #FC6D21;
     border-radius: 5px;
     background-color: #DBDAEB;
-    width: 300px;
+    width: 200px;
     padding: 20px;
     color: #423FE9;
     font-family: "IBM Plex Mono";
-    font-size: 18px;
-    font-weight: 600; }
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    right: 0; }
+  .introduction__anwsers-wrapper {
+    background: #051952;
+    border: 30px solid #8377C7;
+    border-radius: 20px;
+    height: 250px; }
+  .introduction__anwsers-content {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+  .introduction__anwsers-line {
+    width: 100%;
+    height: 5px;
+    background: #423FE9;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  .introduction__anwsers-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .introduction__anwsers-buttons button {
+      width: 120px;
+      height: 60px;
+      font-size: 20px;
+      border: 5px solid #423FE9;
+      background-color: #DBDAEB;
+      color: #423FE9;
+      border-radius: 5px;
+      margin: 0 50px;
+      font-family: "IBM Plex Mono";
+      font-weight: 600; }

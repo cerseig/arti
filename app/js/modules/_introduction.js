@@ -19,10 +19,18 @@ function introduction() {
         if($(this).attr('data-type') == "2-1") {
           $('.introduction__comment-1').css('display', 'block')
           $('.introduction__comment-1').replaceWith('<div class="introduction__comment-1">This is for you a short summary of what is affective computing</div>')
-          $('.introduction__comment-2').replaceWith('<div class="introduction__comment-2">Lorem ipsum dolor sit amet, dolor sit amet toti doesmo dolor sit amet toti doesmo, dolor sit amet toti doesmo, dolor sit amet toti doesmodo lor sit amet toti doesmo, it amet toti doesmo, dolor sit amet toti doesmo, dolor sit amet toti doesmodo lor sit amet toti doesmo</div>')
+          $('.introduction__comment-2').replaceWith('<div class="introduction__comment-2">Affective Computing (also called "Artificial emotional intelligence") can be divided into 3 main topics, which are: display, identification and synthesis. For an IA to interact naturally with a user, it is obligate to go through these 3 phases.</div>')
+          $('.introduction__anwsers-3').css('display', 'none')
+          $('.introduction__anwsers-1').attr('data-type', '3-1');
+          $('.introduction__anwsers-1').html('Thanks!')
+          $('button').on('click', function() {
+            if($(this).attr('data-type') == "3-1") {
+              $('.introduction').fadeOut();
+              $('.page-section').fadeIn();
+            }
+          })
         }
         if($(this).attr('data-type') == "2-2") {
-          console.log('no');
           $('.introduction').fadeOut();
           $('.page-section').fadeIn();
         }

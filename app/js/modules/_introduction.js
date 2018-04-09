@@ -23,6 +23,8 @@ function introduction() {
         }
         if($(this).attr('data-type') == "2-2") {
           console.log('no');
+          $('.introduction').fadeOut();
+          $('.page-section').fadeIn();
         }
       })
 

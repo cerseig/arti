@@ -140,6 +140,8 @@ html {
       display: inline-block;
       width: 300px;
       bottom: 0;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
       transform: translateY(31px);
       overflow: hidden;
       z-index: 3; }

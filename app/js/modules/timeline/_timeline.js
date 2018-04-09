@@ -1,9 +1,4 @@
-// import TimelineMarker from './TimelineMarker'
 export {initTimeline};
-// import {bubble} from "./TimelineBubble.js";
-
-
-
 
 var timeline = document.getElementsByClassName('timeline')[0].parentNode;
 var line = document.getElementsByClassName('timeline-divider')[0];
@@ -14,7 +9,6 @@ var intervalMin,
     max,
     min;
 var markers = [];
-
 var movies={
         "movie": [
             {
@@ -57,12 +51,8 @@ var movies={
     }
 
 function initTimeline(){
-    console.log("hello")
-
-      getTimelineExtremities(movies);
-      createTimeline();
-
-
+    getTimelineExtremities(movies);
+    createTimeline();
 }
 
 var getTimelineExtremities = function (movies){
@@ -101,26 +91,7 @@ var createTimeline = function(){
 
         markers.push(marker)
     }
-    // displayBubble();
 };
-
-
-// var displayBubble = function(){
-//     for(var i = 0; markers.length; i++){
-//
-//         markers[i].addEventListener("click", function(){
-//             // console.log(markers[0].bubble)
-//             // markers[0].bubble.hideOrDisplayBubble(false)
-//             console.log("ffff")
-//         });
-//
-//             // markers[i].
-//     }
-//
-// }
-
-
-
 
 /// CLASSES
 
@@ -147,10 +118,9 @@ class TimelineMarker {
         this.marker.appendChild(this.movieYear)
         this.movieYear.appendChild(this.movieYearText)
 
-        this.bubble = new TimelineBubble(this.position, this._description, this._source)
+        this.bubble = new TimelineBubble(this._title,this.position, this._description, this._source)
         this.listenOnMarker(this.bubble)
     }
-
 
     listenOnMarker(bubble){
         this.marker.addEventListener("click", function(){
@@ -160,14 +130,14 @@ class TimelineMarker {
 
         })
     }
-    //________________________________________ TIMELINE ITEM ___________________________________________
+
 }
 
 /////////////// CLASS BUBBLE
 
 class TimelineBubble {
 
-    constructor(position, description, imgSrc){
+    constructor(title, position, description, imgSrc){
 
         this.position = position
         this.description = description
@@ -186,17 +156,19 @@ class TimelineBubble {
         this.movie_bubble.appendChild(this.movie_bubble_content)
 
         //________________________________________ HEADER ___________________________________________
-        this.bubble_content_header()
+        this.bubble_content_header(title)
 
         //________________________________________ BODY ___________________________________________
         this.bubble_content_body(this.img_src)
 
         //________________________________________ FOOTER ___________________________________________
         this.bubble_content_footer()
+
+        this.listenOnBubble(this.img_close, this.movie_bubble)
     }
 
 
-    bubble_content_header(){
+    bubble_content_header(title){
         // <div class="timeline__content__header">
         this.movie_bubble_content_header = document.createElement("div");
         this.movie_bubble_content_header.classList.add("timeline_content_header")
@@ -205,7 +177,7 @@ class TimelineBubble {
         // <h2>2018</h2>
         this.movie_bubble_content_title = document.createElement("h2");
         this.movie_bubble_content_header.appendChild(this.movie_bubble_content_title)
-        this.movie_bubble_content_title.appendChild(document.createTextNode(this._title))
+        this.movie_bubble_content_title.appendChild(document.createTextNode(title))
 
         //<div class="img__container">
         this.movie_bubble_content_img = document.createElement("div");
@@ -216,7 +188,7 @@ class TimelineBubble {
         this.img_close.src = "../../images/icons/icon_close.svg"
         this.img_close.classList.add("close")
         this.movie_bubble_content_img.appendChild(this.img_close)
-        this.listenOnBubble(this.img_close)
+
     };
 
     bubble_content_body(imgSrc){
@@ -225,7 +197,7 @@ class TimelineBubble {
         this.movie_bubble_content.appendChild(this.movie_bubble_content_body)
 
         this.img = document.createElement("img")
-        this.img.src = imgSrc // TO DO ...
+        this.img.src = imgSrc
         this.movie_bubble_content_body.appendChild(this.img)
 
         this.summary = document.createElement("p")
@@ -262,19 +234,21 @@ class TimelineBubble {
         this.img_web.src = "../../images/icons/icon_web.svg"
         this.web_content.appendChild(this.img_web)
 
-        this.listenOnBubble(this.img_more)
-        this.listenOnBubble(this.img_web)
+        this.listenOnBubble(this.img_more, this.web_content)
+        this.listenOnBubble(this.img_web, this.web_content)
     }
 
     hideOrDisplayBubble(visibility){
         if(visibility === true){
             this.movie_bubble.style.visibility = "visible"
+            this.movie_bubble.style.opacity = "1"
         }else{
+            this.movie_bubble.style.opacity = "0"
             this.movie_bubble.style.visibility = "hidden"
         }
     }
 
-    listenOnBubble(target){
+    listenOnBubble(target, el){
         target.addEventListener("click", function(){
             // console.log("omg")
             console.log(target.classList)
@@ -287,16 +261,15 @@ class TimelineBubble {
                     break
                 case "close":
                     console.log("w",target.classList.value)
-                    this.hideOrDisplayBubble(false) /// TO BE CHECKED d
+                    console.log(el.hideOrDisplayBubble)
+                    // el.hideOrDisplayBubble(false) /// TO BE CHECKED d
                     break
                 default:
                     console.log("didn't work")
                     break
 
             }
-            if(target.classList.value === "more"){
-                console.log("f",target.classList.value)
-            }
+
             // bubble.hideOrDisplayBubble(true)
 
         })

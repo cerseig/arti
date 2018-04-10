@@ -35,7 +35,7 @@
       vertical-align: bottom;
       position: absolute;
       display: inline-block;
-      width: 300px;
+
       bottom: 0;
       opacity: 0;
       transition: all 0.5s ease-in-out;
@@ -90,7 +90,8 @@
 
       .timeline_content_header {
         background-color: $color-gray-light;
-        border: 5px solid $color-orange;
+        border-radius: 5px 5px 0 0;
+        //border: 3px solid $color-orange;
 
         h2 {
           font-size: 20px;
@@ -103,16 +104,16 @@
           display: inline-block;
           float: right;
           padding: 13px;
-          border-left: 5px solid $color-orange;
+        //  border-left: 3px solid $color-orange;
 
 
         }
       }
       .timeline_content_body{
         background-color: $color-gray-light;
-        border-left: 5px solid $color-orange;
-        border-right: 5px solid $color-orange;
-        border-bottom: 5px solid $color-orange;
+       // border-left: 3px solid $color-orange;
+       // border-right: 3px solid $color-orange;
+      //  border-bottom: 3px solid $color-orange;
 
         img{
           width: 100%;
@@ -126,20 +127,68 @@
         .timeline_content_footer_container{
           background-color: $color-gray-light;
           display: inline-block;
-          border-left: 5px solid $color-orange;
-          border-bottom: 5px solid $color-orange;
-          border-right: 3px solid $color-orange;
+          //border-left: 3px solid $color-orange;
+          //border-bottom: 3px solid $color-orange;
+         // border-right: 3px solid $color-orange;
           padding: 0px;
           vertical-align: middle;
 
-          .more_content{
+
+
+
+        }
+      }
+    }
+
+    // /////////////// MOVIE
+
+    .timeline_item.movie{
+      width: 300px;
+      .timeline_content_header {
+        border: 3px solid $color-orange;
+
+        .img_container {
+          border-left: 3px solid $color-orange;
+        }
+      }
+      .timeline_content_body{
+        border-left: 3px solid $color-orange;
+        border-right: 3px solid $color-orange;
+        border-bottom: 3px solid $color-orange;
+      }
+      .timeline_content_footer{
+        .timeline_content_footer_container{
+          border-left: 3px solid $color-orange;
+          border-bottom: 3px solid $color-orange;
+          border-right: 3px solid $color-orange;
+          width: 140px;
+          border-radius: 0 0 5px 5px;
+
+
+
+          .article_content{
+            width: 23%;
             display: inline-block;
             vertical-align: middle;
+            text-align: center;
+            padding: 6px;
             float: left;
             border-right: solid 2.5px $color-orange;
+            img{
+              width: 100%;
+              height: auto;
+            }
+          }
+
+          .more_content{
+            border-left: solid 2.5px $color-orange;
+            display: inline-block;
+            vertical-align: middle;
+            float: right;
+
             text-align: center;
-            width: 33%;
-            padding: 6px;
+            width: 22%;
+            padding: 7px;
             .more{
               width: 100%;
               height: auto;
@@ -149,9 +198,56 @@
           .web_container{
             margin: 0;
             vertical-align: middle;
-            width: 35%;
+            width: 23%;
             display: inline-block;
-            border-left: solid 2.5px #FC6D21;
+
+
+            text-align: center;
+            padding: 6px;
+            .web{
+              padding: 0;
+              width: 100%;
+              height: auto;
+            }
+          }
+
+
+
+        }
+      }
+    }
+
+    .timeline_item.that_article{
+      .timeline_content_header {
+        border: 3px solid $color-blue-light;
+        
+        .img_container {
+          border-left: 3px solid $color-blue-light;
+        }
+      }
+      .timeline_content_body{
+        border-left: 3px solid $color-blue-light;
+        border-right: 3px solid $color-blue-light;
+        border-bottom: 3px solid $color-blue-light;
+        
+          img{
+            width: 30%;
+            height: auto;
+          }
+          h2{
+            display: inline-block;
+          }
+      }
+      .timeline_content_footer{
+        .timeline_content_footer_container{
+          border-left: 3px solid $color-blue-light;
+          border-bottom: 3px solid $color-blue-light;
+          border-right: 3px solid $color-blue-light;
+          .web_container{
+            margin: 0;
+            vertical-align: middle;
+
+            display: inline-block;
             text-align: center;
             padding: 5px;
             .web{
@@ -162,21 +258,72 @@
           }
         }
       }
+
     }
 
+    .st0{fill:red;}
+
+
     .description_bubble{
+
       position: absolute;
-      width: 300px;
+      width: 540px;
       height: 150px;
       background-color: $color-gray-light;
-      border:solid 5px $color-orange;
+      border:solid 3px $color-orange;
+      border-radius:5px 5px 0 0;
       bottom: 30%;
       transform: translateY(31px);
       visibility : hidden;
       transition: all 0.3s ease-in-out;
       z-index: 3;
-      .close{
-        float: right;
+      .timeline_content_header{
+        height: 40px;
+        border-bottom: solid 3px $color-orange;
+
+        h2{
+          margin: 0;
+          font-size: 18px !important;
+          width:80%;
+          padding-top: 7px;
+          padding-left: 10px;
+          display: inline-block;
+        }
+
+        .img_container {
+          border-left: solid 3px $color-orange;
+          display: inline-block;
+          text-align: center;
+          width:40px;
+          height: 30px;
+          padding-top: 10px;
+          right: 0;
+          position: absolute;
+
+          img{
+            width:20px;
+          }
+
+
+
+          //  border-left: 3px solid $color-orange;
+
+
+        }
+        .close{
+          display: inline-block;
+          width:20%;
+        }
+
+
+      }
+
+
+      h2{
+        color: $color-text;
+        font-size: 14px;
+        width:100%;
+        text-align: justify;
       }
 
     }
@@ -184,6 +331,9 @@
   .close {
     width: 20px;
     height: auto;
+
+    fill: #000;
+
   }
   .timeline-divider{
 

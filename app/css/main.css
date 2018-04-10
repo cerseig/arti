@@ -136,7 +136,6 @@ html {
       vertical-align: bottom;
       position: absolute;
       display: inline-block;
-      width: 300px;
       bottom: 0;
       opacity: 0;
       transition: all 0.5s ease-in-out;
@@ -181,7 +180,7 @@ html {
           z-index: 2; }
       .timeline .timeline-container .timeline_item .timeline_content_header {
         background-color: #DBDAEB;
-        border: 5px solid #FC6D21; }
+        border-radius: 5px 5px 0 0; }
         .timeline .timeline-container .timeline_item .timeline_content_header h2 {
           font-size: 20px;
           font-weight: 700;
@@ -191,13 +190,9 @@ html {
         .timeline .timeline-container .timeline_item .timeline_content_header .img_container {
           display: inline-block;
           float: right;
-          padding: 13px;
-          border-left: 5px solid #FC6D21; }
+          padding: 13px; }
       .timeline .timeline-container .timeline_item .timeline_content_body {
-        background-color: #DBDAEB;
-        border-left: 5px solid #FC6D21;
-        border-right: 5px solid #FC6D21;
-        border-bottom: 5px solid #FC6D21; }
+        background-color: #DBDAEB; }
         .timeline .timeline-container .timeline_item .timeline_content_body img {
           width: 100%;
           height: auto; }
@@ -206,50 +201,131 @@ html {
         .timeline .timeline-container .timeline_item .timeline_content_footer .timeline_content_footer_container {
           background-color: #DBDAEB;
           display: inline-block;
-          border-left: 5px solid #FC6D21;
-          border-bottom: 5px solid #FC6D21;
-          border-right: 3px solid #FC6D21;
           padding: 0px;
           vertical-align: middle; }
-          .timeline .timeline-container .timeline_item .timeline_content_footer .timeline_content_footer_container .more_content {
-            display: inline-block;
-            vertical-align: middle;
-            float: left;
-            border-right: solid 2.5px #FC6D21;
-            text-align: center;
-            width: 33%;
-            padding: 6px; }
-            .timeline .timeline-container .timeline_item .timeline_content_footer .timeline_content_footer_container .more_content .more {
-              width: 100%;
-              height: auto; }
-          .timeline .timeline-container .timeline_item .timeline_content_footer .timeline_content_footer_container .web_container {
-            margin: 0;
-            vertical-align: middle;
-            width: 35%;
-            display: inline-block;
-            border-left: solid 2.5px #FC6D21;
-            text-align: center;
-            padding: 5px; }
-            .timeline .timeline-container .timeline_item .timeline_content_footer .timeline_content_footer_container .web_container .web {
-              padding: 0;
-              width: 100%;
-              height: auto; }
+    .timeline .timeline-container .timeline_item.movie {
+      width: 300px; }
+      .timeline .timeline-container .timeline_item.movie .timeline_content_header {
+        border: 3px solid #FC6D21; }
+        .timeline .timeline-container .timeline_item.movie .timeline_content_header .img_container {
+          border-left: 3px solid #FC6D21; }
+      .timeline .timeline-container .timeline_item.movie .timeline_content_body {
+        border-left: 3px solid #FC6D21;
+        border-right: 3px solid #FC6D21;
+        border-bottom: 3px solid #FC6D21; }
+      .timeline .timeline-container .timeline_item.movie .timeline_content_footer .timeline_content_footer_container {
+        border-left: 3px solid #FC6D21;
+        border-bottom: 3px solid #FC6D21;
+        border-right: 3px solid #FC6D21;
+        width: 140px;
+        border-radius: 0 0 5px 5px; }
+        .timeline .timeline-container .timeline_item.movie .timeline_content_footer .timeline_content_footer_container .article_content {
+          width: 23%;
+          display: inline-block;
+          vertical-align: middle;
+          text-align: center;
+          padding: 6px;
+          float: left;
+          border-right: solid 2.5px #FC6D21; }
+          .timeline .timeline-container .timeline_item.movie .timeline_content_footer .timeline_content_footer_container .article_content img {
+            width: 100%;
+            height: auto; }
+        .timeline .timeline-container .timeline_item.movie .timeline_content_footer .timeline_content_footer_container .more_content {
+          border-left: solid 2.5px #FC6D21;
+          display: inline-block;
+          vertical-align: middle;
+          float: right;
+          text-align: center;
+          width: 22%;
+          padding: 7px; }
+          .timeline .timeline-container .timeline_item.movie .timeline_content_footer .timeline_content_footer_container .more_content .more {
+            width: 100%;
+            height: auto; }
+        .timeline .timeline-container .timeline_item.movie .timeline_content_footer .timeline_content_footer_container .web_container {
+          margin: 0;
+          vertical-align: middle;
+          width: 23%;
+          display: inline-block;
+          text-align: center;
+          padding: 6px; }
+          .timeline .timeline-container .timeline_item.movie .timeline_content_footer .timeline_content_footer_container .web_container .web {
+            padding: 0;
+            width: 100%;
+            height: auto; }
+    .timeline .timeline-container .timeline_item.that_article .timeline_content_header {
+      border: 3px solid #67C0FC; }
+      .timeline .timeline-container .timeline_item.that_article .timeline_content_header .img_container {
+        border-left: 3px solid #67C0FC; }
+    .timeline .timeline-container .timeline_item.that_article .timeline_content_body {
+      border-left: 3px solid #67C0FC;
+      border-right: 3px solid #67C0FC;
+      border-bottom: 3px solid #67C0FC; }
+      .timeline .timeline-container .timeline_item.that_article .timeline_content_body img {
+        width: 30%;
+        height: auto; }
+      .timeline .timeline-container .timeline_item.that_article .timeline_content_body h2 {
+        display: inline-block; }
+    .timeline .timeline-container .timeline_item.that_article .timeline_content_footer .timeline_content_footer_container {
+      border-left: 3px solid #67C0FC;
+      border-bottom: 3px solid #67C0FC;
+      border-right: 3px solid #67C0FC; }
+      .timeline .timeline-container .timeline_item.that_article .timeline_content_footer .timeline_content_footer_container .web_container {
+        margin: 0;
+        vertical-align: middle;
+        display: inline-block;
+        text-align: center;
+        padding: 5px; }
+        .timeline .timeline-container .timeline_item.that_article .timeline_content_footer .timeline_content_footer_container .web_container .web {
+          padding: 0;
+          width: 100%;
+          height: auto; }
+    .timeline .timeline-container .st0 {
+      fill: red; }
     .timeline .timeline-container .description_bubble {
       position: absolute;
-      width: 300px;
+      width: 540px;
       height: 150px;
       background-color: #DBDAEB;
-      border: solid 5px #FC6D21;
+      border: solid 3px #FC6D21;
+      border-radius: 5px 5px 0 0;
       bottom: 30%;
       transform: translateY(31px);
       visibility: hidden;
       transition: all 0.3s ease-in-out;
       z-index: 3; }
-      .timeline .timeline-container .description_bubble .close {
-        float: right; }
+      .timeline .timeline-container .description_bubble .timeline_content_header {
+        height: 40px;
+        border-bottom: solid 3px #FC6D21; }
+        .timeline .timeline-container .description_bubble .timeline_content_header h2 {
+          margin: 0;
+          font-size: 18px !important;
+          width: 80%;
+          padding-top: 7px;
+          padding-left: 10px;
+          display: inline-block; }
+        .timeline .timeline-container .description_bubble .timeline_content_header .img_container {
+          border-left: solid 3px #FC6D21;
+          display: inline-block;
+          text-align: center;
+          width: 40px;
+          height: 30px;
+          padding-top: 10px;
+          right: 0;
+          position: absolute; }
+          .timeline .timeline-container .description_bubble .timeline_content_header .img_container img {
+            width: 20px; }
+        .timeline .timeline-container .description_bubble .timeline_content_header .close {
+          display: inline-block;
+          width: 20%; }
+      .timeline .timeline-container .description_bubble h2 {
+        color: #423FE9;
+        font-size: 14px;
+        width: 100%;
+        text-align: justify; }
   .timeline .close {
     width: 20px;
-    height: auto; }
+    height: auto;
+    fill: #000; }
   .timeline .timeline-divider {
     background-color: #FC6D21;
     width: 100%;

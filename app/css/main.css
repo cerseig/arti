@@ -241,7 +241,7 @@ html {
       width: 900px; }
   .introduction__comment-1 {
     width: 200px;
-    border: 5px solid #FC6D21;
+    border: 3px solid #FC6D21;
     border-radius: 5px;
     background-color: #DBDAEB;
     padding: 20px;
@@ -256,7 +256,7 @@ html {
       content: '';
       position: absolute;
       right: 0;
-      bottom: -5px;
+      bottom: -3px;
       width: 0;
       height: 0;
       border: 25px solid transparent;
@@ -266,7 +266,7 @@ html {
       margin-top: -10px;
       margin-right: -25px; }
   .introduction__comment-2 {
-    border: 5px solid #FC6D21;
+    border: 3px solid #FC6D21;
     border-radius: 5px;
     background-color: #DBDAEB;
     width: 200px;
@@ -283,7 +283,7 @@ html {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -5px;
+      bottom: -3px;
       width: 0;
       height: 0;
       border: 25px solid transparent;
@@ -311,7 +311,7 @@ html {
     position: relative; }
   .introduction__anwsers-line {
     width: 100%;
-    height: 5px;
+    height: 3px;
     background: #423FE9;
     position: absolute;
     top: 50%;
@@ -329,7 +329,7 @@ html {
       width: 120px;
       height: 60px;
       font-size: 20px;
-      border: 5px solid #423FE9;
+      border: 3px solid #423FE9;
       background-color: #DBDAEB;
       color: #423FE9;
       border-radius: 5px;

@@ -109,10 +109,8 @@ html {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
-  border: solid 1px red; }
+  height: 100vh; }
   .timeline .timeline-container {
-    border: solid 2px yellow;
     width: 100%;
     height: 50%;
     position: relative;
@@ -195,9 +193,6 @@ html {
           float: right;
           padding: 13px;
           border-left: 5px solid #FC6D21; }
-          .timeline .timeline-container .timeline_item .timeline_content_header .img_container img {
-            width: 20px;
-            height: auto; }
       .timeline .timeline-container .timeline_item .timeline_content_body {
         background-color: #DBDAEB;
         border-left: 5px solid #FC6D21;
@@ -228,14 +223,6 @@ html {
               width: 100%;
               height: auto; }
           .timeline .timeline-container .timeline_item .timeline_content_footer .timeline_content_footer_container .web_container {
-            /*float: right;
-            margin: 0;
-            vertical-align: middle;
-            width: 50%;
-            display: inline-block;
-            border-left: solid 2.5px $color-orange;
-            text-align: center;
-            padding: 5px;*/
             margin: 0;
             vertical-align: middle;
             width: 35%;
@@ -247,6 +234,22 @@ html {
               padding: 0;
               width: 100%;
               height: auto; }
+    .timeline .timeline-container .description_bubble {
+      position: absolute;
+      width: 300px;
+      height: 150px;
+      background-color: #DBDAEB;
+      border: solid 5px #FC6D21;
+      bottom: 30%;
+      transform: translateY(31px);
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+      z-index: 3; }
+      .timeline .timeline-container .description_bubble .close {
+        float: right; }
+  .timeline .close {
+    width: 20px;
+    height: auto; }
   .timeline .timeline-divider {
     background-color: #FC6D21;
     width: 100%;

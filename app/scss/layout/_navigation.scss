@@ -1,0 +1,39 @@
+.navigation {
+  position: relative;
+  z-index: 10;
+  &__home {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: rgba(1,0,54,0.8);
+    padding: 6px 10px;
+    border-radius: 8px;
+    img {
+      transition: all 0.7s ease;
+    }
+  }
+  &__about {
+    position: absolute;
+    transition: all 0.7s ease;
+    top: 30px;
+    right: 30px;
+    background: rgba(1,0,54,0.8);
+    padding: 6px 10px 3px 10px;
+    border-radius: 8px;
+    img {
+      transition: all 0.7s ease;
+    }
+  }
+}
+.about__active {
+  .navigation {
+    &__about {
+      right: 410px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

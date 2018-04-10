@@ -1,0 +1,39 @@
+.about {
+  z-index: 999;
+  width: 350px;
+  height: 100%;
+  transition: all 0.7s ease;
+  background: rgba(1,0,54,0.8);
+  position: fixed;
+  right: -410px;
+  top: 0;
+  padding: 30px;
+  overflow-y: scroll;
+  &__paragraph {
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 22px;
+    }
+    p {
+      font-family: 'ibm_plex_monolight';
+      font-size: 14px;
+    }
+  }
+  &__signature {
+    width: 80%;
+    font-size: 11px;
+    text-align: center;
+    margin: 20px auto;
+  }
+  &__logo {
+    width: 80px;
+    margin: 20px auto 50px auto;
+    display: block;
+  }
+}
+.about__active {
+  .about {
+    right: 0px;
+  }
+}

@@ -35,6 +35,20 @@
       position: absolute;
       left: 0;
       top: 70px;
+      &:after {
+      	content: '';
+      	position: absolute;
+      	right: 0;
+      	bottom: -5px;
+      	width: 0;
+      	height: 0;
+      	border: 25px solid transparent;
+      	border-left-color: $color-orange;
+      	border-right: 0;
+      	border-bottom: 0;
+      	margin-top: -10px;
+      	margin-right: -25px;
+      }
     }
     &-2 {
       border: 5px solid $color-orange;
@@ -50,7 +64,30 @@
       right: 0;
       bottom: 30px;
       max-height: 220px;
-      overflow: hidden;
+      &:after {
+        content: '';
+      	position: absolute;
+      	left: 0;
+      	bottom: -5px;
+      	width: 0;
+      	height: 0;
+      	border: 25px solid transparent;
+      	border-right-color: $color-orange;
+      	border-left: 0;
+      	border-bottom: 0;
+      	margin-top: -10px;
+      	margin-left: -25px;
+      }
+      &.next {
+        padding-bottom: 30px;
+      }
+      img {
+        width: 20px;
+        position: absolute;
+        right: 10px;
+        left: initial;
+        bottom: 10px;
+      }
     }
   }
   &__anwsers {
@@ -93,6 +130,31 @@
         margin: 0 50px;
         font-family: "IBM Plex Mono";
         font-weight: 600;
+        &.introduction__anwsers-picture {
+          font-size: 14px;
+          width: 150px;
+          height: 150px;
+          padding: 0;
+          position: relative;
+          .answer__picture {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 75px;
+            position: absolute;
+            top: 0;
+          }
+          .answer__text {
+            position: absolute;
+            bottom: 0;
+            height: 65px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
       }
     }
   }

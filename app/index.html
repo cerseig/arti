@@ -103,6 +103,11 @@
     <script src="js/app.js" type="module"></script>
     <script type="text/javascript">
 
+    speechSynthesis.onvoiceschanged = function () {
+  var voices = this.getVoices();
+  console.log(voices);
+};
+
         initTimeline()
 
 

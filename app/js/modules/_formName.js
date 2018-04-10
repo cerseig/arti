@@ -21,6 +21,14 @@ function getName() {
 }
 
 function hideFormName() {
+  var loading = new SpeechSynthesisUtterance();
+  loading.voiceURI = 'native';
+  loading.volume = 1; // 0 to 1
+  loading.rate = 1; // 0.1 to 10
+  loading.pitch = 1; //0 to 2
+  loading.text = 'Initiation of electronic platelets and cognitive links';
+  loading.lang = 'en';
+  speechSynthesis.speak(loading);
   $('.landing').fadeOut()
   $('.load-arti').css('display', 'flex')
   loadArti()

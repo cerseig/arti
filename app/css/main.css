@@ -228,6 +228,12 @@ html {
     height: 300px;
     position: relative; }
     .introduction__arti img {
+      user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);

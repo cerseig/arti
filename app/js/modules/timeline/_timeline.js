@@ -128,9 +128,6 @@ var createTimeline = function(){
     timelineContainer.classList.add("timeline-container")
     line.parentNode.insertBefore(timelineContainer, line);
 
-
-
-
     //markers
     for(var i = 0; i < movies.movie.length; i++){
         var movie = movies.movie[i]
@@ -145,13 +142,11 @@ var createTimeline = function(){
 
 
         var marker = new TimelineMarker(movie, article);
-
-        //movie
-        //article
-
         markers.push(marker)
     }
 };
+
+
 
 /// CLASSES
 
@@ -400,9 +395,17 @@ class TimelineBubble extends Bubble{
 
         }
 
+
+
+
+
         this.web_content = document.createElement("div");
         this.web_content.classList.add("web_container")
-        this.movie_bubble_content_footer_container.appendChild(this.web_content)
+        this.link = document.createElement('a')
+        this.link.appendChild(this.web_content)
+        this.link.href = "http://www.google.fr"
+        this.link.target = "_blank"
+        this.movie_bubble_content_footer_container.appendChild( this.link)
 
         this.img_web = document.createElement("img")
         this.img_web.classList.add("web")

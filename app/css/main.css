@@ -239,9 +239,27 @@ html {
       transform: translateX(-50%);
       bottom: 0;
       width: 900px; }
+    .introduction__arti-event {
+      width: 430px;
+      height: 200px;
+      position: absolute;
+      z-index: 20;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer; }
+    .introduction__arti-warning {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 60px;
+      margin-left: -5px; }
   .introduction__comment-1 {
     width: 200px;
-    border: 3px solid #FC6D21;
+    border: 5px solid #FC6D21;
     border-radius: 5px;
     background-color: #DBDAEB;
     padding: 20px;
@@ -256,7 +274,7 @@ html {
       content: '';
       position: absolute;
       right: 0;
-      bottom: -3px;
+      bottom: -5px;
       width: 0;
       height: 0;
       border: 25px solid transparent;
@@ -266,7 +284,7 @@ html {
       margin-top: -10px;
       margin-right: -25px; }
   .introduction__comment-2 {
-    border: 3px solid #FC6D21;
+    border: 5px solid #FC6D21;
     border-radius: 5px;
     background-color: #DBDAEB;
     width: 200px;
@@ -283,7 +301,7 @@ html {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -3px;
+      bottom: -5px;
       width: 0;
       height: 0;
       border: 25px solid transparent;
@@ -302,7 +320,7 @@ html {
       bottom: 10px; }
   .introduction__anwsers-wrapper {
     background: #051952;
-    border: 30px solid #8377C7;
+    border: 30px solid #737BCD;
     border-radius: 20px;
     height: 250px; }
   .introduction__anwsers-content {
@@ -311,7 +329,7 @@ html {
     position: relative; }
   .introduction__anwsers-line {
     width: 100%;
-    height: 3px;
+    height: 5px;
     background: #423FE9;
     position: absolute;
     top: 50%;
@@ -329,7 +347,7 @@ html {
       width: 120px;
       height: 60px;
       font-size: 20px;
-      border: 3px solid #423FE9;
+      border: 5px solid #423FE9;
       background-color: #DBDAEB;
       color: #423FE9;
       border-radius: 5px;

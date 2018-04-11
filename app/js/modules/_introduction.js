@@ -13,8 +13,34 @@ function introduction() {
   intro.lang = 'en';
   speechSynthesis.speak(intro);
 
+  var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+  var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
+  var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+
+  var recognition = new SpeechRecognition();
+  recognition.lang = 'en-US';
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  // document.body.onclick = function() {
+  //   recognition.start();
+  // }
+
+  var answer = 0;
+
+  recognition.onresult = function(event) {
+    var last = event.results.length - 1;
+    answer = event.results[last][0].transcript;
+    console.log(answer);
+  }
+
+  recognition.onspeechend = function() {
+    recognition.stop();
+  }
+
   $('.introduction__comment-1').append('Hello '+ name +', my name is Arti.')
   $('.introduction__comment-2').append('Have you ever heard about affective computing ?')
+
 
   $('button').on('click', function() {
 
@@ -24,7 +50,8 @@ function introduction() {
     $('.introduction__comment-2').replaceWith('<div class="introduction__comment-2">Do you want to know what it is?</div>')
     $('.introduction__anwsers-2').css('display','none')
 
-    if($(this).attr('data-type') == "1-1" || $(this).attr('data-type') == "1-2" || $(this).attr('data-type') == "1-3") {
+
+    if($(this).attr('data-type') == "1-1" || $(this).attr('data-type') == "1-2" || $(this).attr('data-type') == "1-3" || anwser == 'yes') {
 
       intro.text = 'Do you want to know what it is?';
       speechSynthesis.speak(intro);
@@ -78,7 +105,7 @@ function introduction() {
           $('button').on('click', function() {
 
             speechSynthesis.cancel();
-            
+
             if($(this).attr('data-type') == "3-3"){
               $('.introduction__anwsers-1').replaceWith('<button class="introduction__anwsers-1" data-type="4-1">Yeaaaah!</button>')
               $('.introduction__anwsers-2').css('display', 'none')

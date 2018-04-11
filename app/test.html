@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div>
+        <p class="output"><em>...diagnostic messages</em></p>
+    </div>
+
+    <script type="text/javascript">
+
+    var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
+var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+
+var recognition = new SpeechRecognition();
+//recognition.continuous = false;
+recognition.lang = 'en-US';
+recognition.interimResults = false;
+recognition.maxAlternatives = 1;
+
+var diagnostic = document.querySelector('.output');
+
+document.body.onclick = function() {
+  recognition.start();
+}
+
+recognition.onresult = function(event) {
+  var last = event.results.length - 1;
+  var anwser = event.results[last][0].transcript;
+  diagnostic.textContent = anwser;
+  if(anwser == 'yes') {
+    console.log(anwser);
+  }
+}
+
+recognition.onspeechend = function() {
+  recognition.stop();
+}
+
+recognition.onnomatch = function(event) {
+  diagnostic.textContent = "I didn't recognise that color.";
+}
+
+recognition.onerror = function(event) {
+  diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
+}
+
+    </script>
+
+  </body>
+</html>

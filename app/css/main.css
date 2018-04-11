@@ -89,8 +89,9 @@ html {
     font-family: 'ibm_plex_monoregular';
     background: linear-gradient(0deg, #521DCF 0%, rgba(44, 52, 160, 0) 100%); }
     html body main {
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
       background-image: linear-gradient(transparent 85%, #521DCF 15%);
       background-size: 6px 6px; }
 

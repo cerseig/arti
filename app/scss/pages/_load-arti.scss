@@ -5,8 +5,11 @@
   text-align: center;
   width: 100%;
   height: 100%;
-  font-size: 25px;
+  font-size: 20px;
   &__text {
-    width: 400px;
+    width: 300px;
+  }
+  &__counter {
+    font-size: 25px;
   }
 }

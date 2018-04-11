@@ -1,40 +1,87 @@
 {
   "movie": [
     {
-      "titre": "titre1",
-      "annee": 1968,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc elit, volutpat hendrerit tortor ac, congue varius elit. ",
-      "image": ""
+      "title" : "Westworld",
+      "annee" : 1973,
+      "author" : "Michael Crichton",
+      "description" : "Westworld splits its time between various parts of futuristic theme park called Delos where guests get to live in recreations of three different time periods: the old west, medieval Europe, and ancient Pompeii. The three words are populated with androids the guests can fight and have sex with, all without the pesky morals that might come up if there were “real” people involved.\n \n In the movie, a virus begins spreading through the androids. A female android refuses a guest’s “advances” and a knight doesn’t let the guest win their sword fight.\n",
+      "image" : "../../images/movies/articifial_consciousness_movie_westworld-1973.gif",
+      "url" : "https://www.nytimes.com/1973/11/22/archives/the-screen-westworld-robots-and-fantasies-in-film-by-crichton-the.html",
+      "articleId" : 1
     },
     {
-      "titre": "titre2",
-      "annee": 1977,
-      "description": "deux",
-      "image": ""
+      "title" : "Summer Wars - Platform “Oz world”",
+      "annee" : 2010,
+      "author" : "Mamoru Hosoda",
+      "description" : "Summer Wars presents us with two different settings and conflicts. Oz, an internet-based society in which tens of millions of people and businesses around the world, represented by their own custom avatars can interact with each other in all manner of activities. The other contrasting setting is an old-style Japanese mansion in a calm countryside area. In the movie Oz is hacked by an intelligent machine, stealing people’s account.\n \nIs the movie trying to warn us from technology becoming so ingrained in our lives?\n",
+      "image" : "../../images/movies/computer_games.gif",
+      "url" : "http://animeyume.com/blog/2010/03/08/the-message-of-summer-wars-two-worlds/",
+      "articleId" : 2
     },
     {
-      "titre": "titre3",
-      "annee": 1999,
-      "description": "trois",
-      "image": ""
+      "title" : "Star Wars - R2-D2",
+      "annee" : 1977,
+      "author" : "George Lucas",
+      "description" : "Computers have bodies different from ours. But they still can give the appearance of having emotions. R2D2 doesn’t have a humanoid body, far from it, but the fact that he expresses himself with “facial” display or cute noises makes him endearing. Thus, the issue is not one of the body, or of the body’s capabilities to express, but the issue is a much harder one: how to get machines to express emotion in an appropriate way? ",
+      "image" : "../../images/movies/emotion_expression.gif",
+      "url" : "https://affect.media.mit.edu/pdfs/03.picard.pdf",
+      "articleId" : 2
     },
     {
-      "titre": "titre4",
-      "annee": 2004,
-      "description": "quatre",
-      "image": ""
-    },
-    {
-      "titre": "titre5",
-      "annee": 2014,
-      "description": "cinq",
-      "image": ""
-    },
-    {
-      "titre": "titre6",
-      "annee": 2018,
-      "description": "six",
-      "image": ""
+      "title" : "Blade Runner - Voight-Kampff",
+      "annee" : 1982,
+      "author" : "Ridley Scott",
+      "description" : "The Voight-Kampff is a device inspired by lie detectors and the famous Turing test. It is used by the \"Blade Runners\", policemen in charge of the withdrawal of the illegal replicants, to determine if an individual is a replicant or a human being. This device measures biological responses to stimuli to assess the replicators' potential for empathy. Their eyes shine when they are troubled.",
+      "image" : "../../images/movies/face_recognition_movie.gif",
+      "url" : "",
+      "articleId" : 4
     }
+  ],
+
+  "article":[
+    {
+      "title" : "Can machines achieve emotional intelligence ?",
+      "date" : "October 2017",
+      "author" : "Jen Clark",
+      "description" : "A fully autonomous, conscious, decision-making humanoid bot is, at the moment, the stuff of fiction. And yet, ‘affective computing’, or the capability to recognize, respond to and even emulate human emotions is present in some of today’s machines. So to what extent can machines exhibit emotional intelligence? And how are these capabilities being put to use?",
+      "image" : "../../images/movies/articifial_consciousness_article.gif",
+      "url" : "https://www.ibm.com/blogs/internet-of-things/affective-computing/",
+      "source" : "IBM blog",
+      "articleId" : 1
+    },
+    {
+      "title" : "Seizure during a chat in Virtual Reality",
+      "date" : "January 2018",
+      "author" : "Emanuel Maiberg",
+      "description" : "VRChat is a free-to-play massively multiplayer online virtual reality video game [...]. It allows players to interact with others as 3D character models. VRChat users were goofing off in one of the app's virtual environments when suddenly one of the avatars in the room, a black and red robot, fell to the floor and began twitching. At first, it's unclear if it was just a bug or someone goofing off, which is what many VRChat users like to do.",
+      "image" : "../../images/movies/computer_games.gif",
+      "url" : "https://motherboard.vice.com/en_us/article/ne4myg/vrchat-seizure ",
+      "source" : "Vice (Motherboard)",
+      "articleId" : 2
+    },
+
+    {
+      "title" : "Seizure during a chat in Virtual Reality",
+      "date" : "January 2018",
+      "author" : "Emanuel Maiberg",
+      "description" : "VRChat is a free-to-play massively multiplayer online virtual reality video game [...]. It allows players to interact with others as 3D character models. VRChat users were goofing off in one of the app's virtual environments when suddenly one of the avatars in the room, a black and red robot, fell to the floor and began twitching. At first, it's unclear if it was just a bug or someone goofing off, which is what many VRChat users like to do.",
+      "image" : "../../images/movies/computer_games.gif",
+      "url" : "https://motherboard.vice.com/en_us/article/ne4myg/vrchat-seizure ",
+      "source" : "Vice (Motherboard)",
+      "articleId" : 3
+    },
+    {
+      "title" : "The scary science behing Google Arts & Culture app",
+      "date" : "January 2018",
+      "author" : "Arwa Mahdawi",
+      "description":"Google Arts & Culture app released an option that allows Google to find the artwork you most resemble – but it also supports the rise of the surveillance state [...] The app may be good fun, but it is also fundamentally frightening: Google’s latest experiment, you see, says less about art than it does the burgeoning science of facial recognition technology.\n While Google’s museum doppelgangers aren’t exactly 100% accurate, facial recognition technology has become increasingly sophisticated over the past few years and is fast becoming a pervasive part of our lives. [...]",
+      "image" : "../../images/movies/face_recognition_article.jpg",
+      "url" : "https://www.theguardian.com/commentisfree/2018/jan/16/find-your-art-doppelganger-facial-recognition-technology-frightening",
+      "source" : "The Guardian",
+      "articleId" : 4
+    }
+
   ]
+
+
 }

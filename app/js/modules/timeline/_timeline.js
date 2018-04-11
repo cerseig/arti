@@ -79,13 +79,23 @@ var movies=
                 "articleId" : 7
             },
             {
-                "title" : "HER”",
+                "title" : "HER",
                 "annee" : 2013,
                 "author" : "Mamoru Hosoda",
                 "description" : "Theodore is a lonely man in the final stages of his divorce. When he's not working as a letter writer, his down time is spent playing video games and occasionally hanging out with friends. He decides to purchase the new OS1, which is advertised as the world's first artificially intelligent operating system, \"It's not just an operating system, it's a consciousness,\" the ad states. Theodore quickly finds himself drawn in with Samantha, the voice behind his OS1.",
                 "image" : "../../images/movies/vocal_ass_bis_m.gif",
                 "url" : "http://animeyume.com/blog/2010/03/08/the-message-of-summer-wars-two-worlds/",
                 "articleId" : 8
+            }
+            ,
+            {
+                "title" : "A.I. Intelligence artificielle - Gigolo Joe",
+                "annee" : 2001,
+                "author" : "Steven Spielberg",
+                "description":"In a futuristic world ravaged by global warming and where procreation is strictly regulated, human beings live in perfect harmony with the \"mechas\", androids robots specially created to meet their needs: household chores, services and love. Gigolo Joe is a male pleasure Mecha.",
+                "image" : "../../images/movies/sex_doll_m2.gif",
+                "url" : "",
+                "articleId" : 9
             }
         ],
 
@@ -171,6 +181,16 @@ var movies=
                 "url" : "https://www.nytimes.com/2018/03/08/business/alexa-laugh-amazon-echo.html",
                 "source" : "New York Times",
                 "articleId" : 8
+            },
+            {
+                "title" : "Hard wired: Now you'll be able to buy MALE sex robots too as artificial 'companions' with bionic penises are set to go on sale this year",
+                "date" : "January 2018",
+                "author" : "Connor Boyd",
+                "description":"Male sex robots with bionic penises will be rolled out this year according to the  pioneer of pleasure behind the popular female versions that dropped last year. Matt McMullen, founder of Realbotix, is the man who created Harmony, an artificial intelligence app that syncs up with a robotic head system. The application enables users to match an AI personality with a humanoid robot head, to create the most realistic sex doll imaginable.",
+                "image" : "../../images/movies/sex_doll_a.jpg",
+                "url" : "http://www.dailymail.co.uk/news/article-5244155/Male-sex-robots-bionic-penises-coming-2018.html ",
+                "source" : "New York Times",
+                "articleId" : 9
             }
         ]
 
@@ -263,7 +283,8 @@ class TimelineMarker {
             movie.image.toString(),
             "movie",
             movie.annee,
-            movie.url
+            movie.url,
+            movie.author.toString()
         )
         this.listenOnMarker(this.bubble)
 
@@ -278,9 +299,18 @@ class TimelineMarker {
             article.image.toString(),
             "that_article",
             article.date.toString(),
-            article.url
+            article.url,
+            article.author.toString()
         )
         this.bubble.listenOnBubble(this.bubble.img_article, this.article.movie_bubble)
+
+
+        // this.article.listenOnBubble(this, this)
+        // this.description_bubble.listenOnBubble(this, this)
+
+        this.listenZIndex(this.article)
+        this.listenZIndex(this.description_bubble)
+        this.listenZIndex(this.article)
         // Articles
 
     }
@@ -288,6 +318,13 @@ class TimelineMarker {
     listenOnMarker(bubble){
         this.marker.addEventListener("click", function(){
             bubble.hideOrDisplayBubble(true)
+        })
+    }
+
+    listenZIndex(bubble){
+        this.marker.addEventListener("click", function(){
+            zIndex++
+            bubble.style.zIndex = zIndex
         })
     }
 
@@ -311,8 +348,13 @@ class Bubble{
                     zIndex++;
                     el.style.zIndex =zIndex
 
+
                     break
                 case "web":
+
+
+
+                    //put a change classe function
 
                     el.style.opacity = "1"
                     el.style.visibility = "visible"
@@ -336,6 +378,9 @@ class Bubble{
                     el.style.opacity = "0"
                     el.style.visibility = "hidden"
                     break
+                case "timeline_item":
+                    zIndex++;
+                    el.style.zIndex =zIndex
                 default:
 
                     break
@@ -350,7 +395,7 @@ class Bubble{
 
 class TimelineBubble extends Bubble{
 
-    constructor(title, position, description, imgSrc, type, date, url){
+    constructor(title, position, description, imgSrc, type, date, url, author){
         super()
 
         this.position = position
@@ -363,8 +408,8 @@ class TimelineBubble extends Bubble{
         if(type === "movie"){
             this.movie_bubble.style.left = this.position + "px"  ////////////// Change
         }else{
-            this.movie_bubble.style.left =this.position + 450 +"px"
-            this.movie_bubble.style.top = "70px";
+            this.movie_bubble.style.left =this.position + 150 +"px"
+            this.movie_bubble.style.top = "370px";
         }
 
         this.movie_bubble.style.visibility = "hidden"
@@ -378,7 +423,7 @@ class TimelineBubble extends Bubble{
         //________________________________________ HEADER ___________________________________________
 
         this.movie_bubble_content_img = document.createElement("div");
-        this.bubble_content_header(title, date, type)
+        this.bubble_content_header(title, date, type, author)
 
         //________________________________________ BODY ___________________________________________
         this.bubble_content_body(imgSrc,type)
@@ -391,7 +436,7 @@ class TimelineBubble extends Bubble{
     }
 
 
-    bubble_content_header(title, date, type){
+    bubble_content_header(title, date, type, author){
 
         this.type = type
         // <div class="timeline__content__header">
@@ -412,7 +457,7 @@ class TimelineBubble extends Bubble{
         this.title_container = document.createElement('div')
 
         this.movie_bubble_content_title = document.createElement("h2");
-        this.movie_bubble_content_title.setAttribute("data-text", title)
+        this.movie_bubble_content_title.setAttribute("data-text", title + " - "+author)
 
 
 
@@ -421,7 +466,7 @@ class TimelineBubble extends Bubble{
         this.title_container.appendChild(this.movie_bubble_content_title)
 
 
-        this.movie_bubble_content_title.appendChild(document.createTextNode(title))
+        this.movie_bubble_content_title.appendChild(document.createTextNode(title + " - "+author))
 
         //<div class="img__container">
 
@@ -429,7 +474,12 @@ class TimelineBubble extends Bubble{
         this.movie_bubble_content_header.appendChild(this.movie_bubble_content_img)
 
         this.img_close = document.createElement("img")
-        this.img_close.src = "../../images/icons/icon_close.svg"
+        if(this.type !=="movie"){
+            this.img_close.src = "../../images/icons/icon_close_blue.svg"
+        }else{
+            this.img_close.src = "../../images/icons/icon_close.svg"
+        }
+
         this.img_close.classList.add("close")
         this.movie_bubble_content_img.appendChild(this.img_close)
 
@@ -451,9 +501,6 @@ class TimelineBubble extends Bubble{
         }else{
             this.movie_bubble_content_body.appendChild(this.img)
         }
-
-
-
 
         this.summary = document.createElement("p")
         this.movie_bubble_content_body.appendChild(this.summary)
@@ -500,7 +547,11 @@ class TimelineBubble extends Bubble{
 
         this.img_web = document.createElement("img")
         this.img_web.classList.add("web")
-        this.img_web.src = "../../images/icons/icon_web.svg"
+        if(this.type ==="movie"){
+            this.img_web.src = "../../images/icons/icon_web.svg"
+        }else{
+            this.img_web.src = "../../images/icons/icon_web_blue.svg"
+        }
         this.web_content.appendChild(this.img_web)
 
         if(this.img_article && this.web_content){
@@ -554,7 +605,7 @@ class Description extends Bubble{
         //this.position = position
         this.description_bubble = document.createElement('div')
         this.description_bubble.style.left= position + 200 +"px"
-        this.description_bubble.style.top = "30px";
+        this.description_bubble.style.top = "300px";
         this.description_bubble.classList.add('description_bubble')
         timelineContainer.appendChild(this.description_bubble)
 

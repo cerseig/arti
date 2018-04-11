@@ -45,16 +45,16 @@
       top: 100%;
       transform:translateY(-50%);
       width: 5px;
-      height: 25px;
+      height: 35px;
       background-color: $color-orange;
       transition: all 0.2s ease-in-out;
       &:hover{
-        height: 50px;
+        //height: 50px;
         background-color: $color-blue-light;
       }
       span{
         position: absolute;
-        transform: translateX(-18px) translateY(-25px);
+        transform: translateX(-18px) translateY(50px);
       }
     }
 

@@ -1,5 +1,12 @@
 export {introduction};
 
+function showTimeline() {
+  speechSynthesis.cancel();
+  $('.introduction').fadeOut();
+  $('.page-section').fadeIn();
+  $('.timeline__arti').css('position','absolute').css('top', '0');
+}
+
 function introduction() {
 
   var name = $('#name').val();
@@ -83,10 +90,8 @@ function introduction() {
           $('.introduction__anwsers-1').attr('data-type', '3-1');
           $('.introduction__anwsers-1').html('Thanks!')
           $('button').on('click', function() {
-            speechSynthesis.cancel();
             if($(this).attr('data-type') == "3-1") {
-              $('.introduction').fadeOut();
-              $('.page-section').fadeIn();
+              showTimeline()
             }
           })
         }
@@ -118,9 +123,7 @@ function introduction() {
               $('.introduction__comment-2').css('display', 'none')
               $('button').on('click', function() {
                 if($(this).attr('data-type') == "4-1") {
-                  speechSynthesis.cancel();
-                  $('.introduction').fadeOut();
-                  $('.page-section').fadeIn();
+                  showTimeline()
                 }
               })
             }
@@ -145,9 +148,7 @@ function introduction() {
               $('.introduction__anwsers-3').css('display','none')
               $('button').on('click', function() {
                 if($(this).attr('data-type') == "4-1") {
-                  speechSynthesis.cancel();
-                  $('.introduction').fadeOut();
-                  $('.page-section').fadeIn();
+                  showTimeline()
                 }
               })
             }
@@ -158,6 +159,5 @@ function introduction() {
     }
 
   })
-
 
 }

@@ -13,30 +13,30 @@ function introduction() {
   intro.lang = 'en';
   speechSynthesis.speak(intro);
 
-  var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
-  var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
-  var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
-
-  var recognition = new SpeechRecognition();
-  recognition.lang = 'en-US';
-  recognition.interimResults = false;
-  recognition.maxAlternatives = 1;
+  // var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
+  // var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
+  // var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
+  //
+  // var recognition = new SpeechRecognition();
+  // recognition.lang = 'en-US';
+  // recognition.interimResults = false;
+  // recognition.maxAlternatives = 1;
 
   // document.body.onclick = function() {
   //   recognition.start();
   // }
 
-  var answer = 0;
-
-  recognition.onresult = function(event) {
-    var last = event.results.length - 1;
-    answer = event.results[last][0].transcript;
-    console.log(answer);
-  }
-
-  recognition.onspeechend = function() {
-    recognition.stop();
-  }
+  // var answer = 0;
+  //
+  // recognition.onresult = function(event) {
+  //   var last = event.results.length - 1;
+  //   answer = event.results[last][0].transcript;
+  //   console.log(answer);
+  // }
+  //
+  // recognition.onspeechend = function() {
+  //   recognition.stop();
+  // }
 
   $('.introduction__comment-1').append('Hello '+ name +', my name is Arti.')
   $('.introduction__comment-2').append('Have you ever heard about affective computing ?')
@@ -51,7 +51,7 @@ function introduction() {
     $('.introduction__anwsers-2').css('display','none')
 
 
-    if($(this).attr('data-type') == "1-1" || $(this).attr('data-type') == "1-2" || $(this).attr('data-type') == "1-3" || anwser == 'yes') {
+    if($(this).attr('data-type') == "1-1" || $(this).attr('data-type') == "1-2" || $(this).attr('data-type') == "1-3") {
 
       intro.text = 'Do you want to know what it is?';
       speechSynthesis.speak(intro);

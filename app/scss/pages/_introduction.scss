@@ -50,7 +50,7 @@
   &__comment {
     &-1 {
       width: 200px;
-      border: 5px solid $color-orange;
+      border: 3px solid $color-orange;
       border-radius: 5px;
       background-color: $color-gray-light;
       padding: 20px;
@@ -61,11 +61,26 @@
       position: absolute;
       left: 0;
       top: 70px;
+      &:before {
+      	content: '';
+      	position: absolute;
+      	right: 0;
+      	bottom: 0;
+      	width: 0;
+      	height: 0;
+      	border: 25px solid transparent;
+      	border-left-color: $color-gray-light;
+      	border-right: 0;
+      	border-bottom: 0;
+      	margin-top: -10px;
+      	margin-right: -18px;
+        z-index: 1;
+      }
       &:after {
       	content: '';
       	position: absolute;
       	right: 0;
-      	bottom: -5px;
+      	bottom: -3px;
       	width: 0;
       	height: 0;
       	border: 25px solid transparent;
@@ -77,7 +92,7 @@
       }
     }
     &-2 {
-      border: 5px solid $color-orange;
+      border: 3px solid $color-orange;
       border-radius: 5px;
       background-color: $color-gray-light;
       width: 200px;
@@ -90,11 +105,26 @@
       right: 0;
       bottom: 30px;
       max-height: 220px;
+      &:before {
+        content: '';
+      	position: absolute;
+      	left: 0;
+      	bottom: 0;
+      	width: 0;
+      	height: 0;
+      	border: 25px solid transparent;
+      	border-right-color: $color-gray-light;
+      	border-left: 0;
+      	border-bottom: 0;
+      	margin-top: -10px;
+      	margin-left: -18px;
+        z-index: 1;
+      }
       &:after {
         content: '';
       	position: absolute;
       	left: 0;
-      	bottom: -5px;
+      	bottom: -3px;
       	width: 0;
       	height: 0;
       	border: 25px solid transparent;
@@ -156,6 +186,11 @@
         margin: 0 50px;
         font-family: "IBM Plex Mono";
         font-weight: 600;
+        transition: all 0.3s ease;
+        &:hover, &:active, &:focus {
+          background-color: $color-blue-purple;
+          color: $color-gray-light;
+        }
         &.introduction__anwsers-picture {
           font-size: 14px;
           width: 150px;

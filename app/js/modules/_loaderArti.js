@@ -4,6 +4,14 @@ export {loadArti};
 
 function loadArti() {
 
+  var animation = bodymovin.loadAnimation({
+    container: document.getElementById('loader-arti__bodymovin'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'data/anim-loader.json'
+  })
+
   $('.load-arti__counter').each(function () {
     $(this).prop('Counter',0).animate({
         Counter: $(this).text()

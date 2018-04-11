@@ -539,11 +539,21 @@ class TimelineBubble extends Bubble{
 
         this.web_content = document.createElement("div");
         this.web_content.classList.add("web_container")
-        this.link = document.createElement('a')
-        this.link.appendChild(this.web_content)
-        this.link.href = url
-        this.link.target = "_blank"
-        this.movie_bubble_content_footer_container.appendChild( this.link)
+
+
+
+        if(url!=""){
+            this.link = document.createElement('a')
+            this.link.appendChild(this.web_content)
+            this.link.href = url
+            this.link.target = "_blank"
+            this.movie_bubble_content_footer_container.appendChild( this.link)
+        }else{
+            this.movie_bubble_content_footer_container.appendChild(this.web_content)
+        }
+
+
+
 
         this.img_web = document.createElement("img")
         this.img_web.classList.add("web")

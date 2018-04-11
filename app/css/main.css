@@ -92,7 +92,7 @@ html {
       width: 100%;
       height: 100%;
       background-image: linear-gradient(transparent 85%, #521DCF 15%);
-      background-size: 15px 15px; }
+      background-size: 6px 6px; }
 
 .about {
   z-index: 999;

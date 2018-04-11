@@ -187,7 +187,7 @@
         font-family: "IBM Plex Mono";
         font-weight: 600;
         transition: all 0.3s ease;
-        &:hover, &:active, &:focus {
+        &:hover {
           background-color: $color-blue-purple;
           color: $color-gray-light;
         }

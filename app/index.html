@@ -11,14 +11,17 @@
     <link rel="icon" type="image/png" href="images/icons/favicon.png"/>
 </head>
 <body>
+  <audio autoplay loop>
+    <source src="sounds/background.wav" type="audio/wav">
+  </audio>
 
 <main>
 
      <button type="button" name="button" class="show-timeline">TIMELINE</button>
 
     <nav class="navigation">
-        <div class="navigation__home"><img src="images/icons/home.svg" alt=""></div>
-        <div class="navigation__about"><img src="images/icons/about.svg" alt=""></div>
+        <div class="navigation__home"><img class="default" src="images/icons/home.svg" alt=""><img class="hover" src="images/icons/home_hover.svg" alt=""></div>
+        <div class="navigation__about"><img class="default" src="images/icons/about.svg" alt=""><img class="hover" src="images/icons/about_hover.svg" alt=""></div>
     </nav>
 
     <div class="about">
@@ -82,8 +85,8 @@
     <section class="introduction">
         <div class="introduction__content">
             <div class="introduction__arti">
-                <div class="introduction__arti-event"></div>
-                <img class="introduction__animation" src="images/arti/arti_anim_5.gif" alt="">
+                <div class="introduction__arti-event arti-event"></div>
+                <img class="introduction__animation arti-robot" src="images/arti/arti_anim_5.gif" alt="">
                 <div class="introduction__arti-warning">Don't touch me.</div>
                 <div class="introduction__comment-1"></div>
                 <div class="introduction__comment-2"></div>
@@ -109,6 +112,10 @@
         <div class="container">
             <div class="timeline" id="test">
                 <div class="timeline-divider"></div>
+                <div class="timeline__arti">
+                    <div class="timeline__arti-event arti-event"></div>
+                    <img class="timeline__arti-robot arti-robot" src="images/arti/arti_anim_5.gif" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -123,6 +130,7 @@
 
         $('.show-timeline').on('click', function () {
             $('section').css('display', 'none')
+            $('.timeline__arti').css('position','absolute').css('top', '0');
         })
 
 

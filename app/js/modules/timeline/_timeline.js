@@ -238,13 +238,10 @@ var createTimeline = function(){
             }
         }
 
-
         var marker = new TimelineMarker(movie, article);
         markers.push(marker)
     }
 };
-
-
 
 /// CLASSES
 
@@ -254,18 +251,11 @@ var createTimeline = function(){
 class TimelineMarker {
 
     constructor(movie, article){
-        console.log(movie)
-        console.log(article)
         this.marker = document.createElement("div");
         this.title = movie.title.toString();
-
-
-        console.log(movie.annee)
         this.description = movie.description.toString()
-
         this.source = movie.image.toString()
         this.position = ((movie.annee - intervalMin) * timeline.clientWidth) / timelineDuration;
-
 
         this.marker.classList.add("marker")
         this.marker.style.left = this.position + "px"
@@ -284,13 +274,14 @@ class TimelineMarker {
             "movie",
             movie.annee,
             movie.url,
-            movie.author.toString()
+            movie.author.toString(),
+            movie.articleId
         )
+
         this.listenOnMarker(this.bubble)
 
         this.description_bubble = new Description(this.description, this.position)
-        this.bubble.listenOnBubble(this.bubble.img_more, this.description_bubble.description_bubble)
-
+        this.bubble.listenOnBubble(this.bubble.more_content, this.description_bubble.description_bubble)
 
         this.article = new TimelineBubble(
             article.title.toString(),
@@ -300,31 +291,15 @@ class TimelineMarker {
             "that_article",
             article.date.toString(),
             article.url,
-            article.author.toString()
+            article.author.toString(),
+            article.articleId
         )
-        this.bubble.listenOnBubble(this.bubble.img_article, this.article.movie_bubble)
-
-
-        // this.article.listenOnBubble(this, this)
-        // this.description_bubble.listenOnBubble(this, this)
-
-        this.listenZIndex(this.article)
-        this.listenZIndex(this.description_bubble)
-        this.listenZIndex(this.article)
-        // Articles
-
+        this.bubble.listenOnBubble(this.bubble.article_content, this.article.movie_bubble)
     }
 
     listenOnMarker(bubble){
         this.marker.addEventListener("click", function(){
             bubble.hideOrDisplayBubble(true)
-        })
-    }
-
-    listenZIndex(bubble){
-        this.marker.addEventListener("click", function(){
-            zIndex++
-            bubble.style.zIndex = zIndex
         })
     }
 
@@ -334,26 +309,19 @@ class TimelineMarker {
 
 class Bubble{
     constructor(){
-
     }
 
     listenOnBubble(target, el){
         target.addEventListener("click", function(){
             switch (target.classList.value){
-                case "more":
-
+                case "more_content":
 
                     el.style.opacity = "1"
                     el.style.visibility = "visible"
                     zIndex++;
                     el.style.zIndex =zIndex
-
-
                     break
-                case "web":
-
-
-
+                case "article_content":
                     //put a change classe function
 
                     el.style.opacity = "1"
@@ -379,28 +347,24 @@ class Bubble{
                     el.style.visibility = "hidden"
                     break
                 case "timeline_item":
+
                     zIndex++;
                     el.style.zIndex =zIndex
+                    el.changeIndex(el, zIndex)
                 default:
 
                     break
-
             }
-
-            // bubble.hideOrDisplayBubble(true)
-
         })
     }
 }
 
 class TimelineBubble extends Bubble{
 
-    constructor(title, position, description, imgSrc, type, date, url, author){
+    constructor(title, position, description, imgSrc, type, date, url, author, article_id){
         super()
-
         this.position = position
         this.description = description
-
         this.movie_bubble = document.createElement("div");
         this.movie_bubble.classList.add("timeline_item")
         this.movie_bubble.classList.add(type)
@@ -426,15 +390,13 @@ class TimelineBubble extends Bubble{
         this.bubble_content_header(title, date, type, author)
 
         //________________________________________ BODY ___________________________________________
-        this.bubble_content_body(imgSrc,type)
+        this.bubble_content_body(imgSrc,type, article_id)
 
         //________________________________________ FOOTER ___________________________________________
         this.bubble_content_footer(type, url)
 
         this.listenOnBubble(this.movie_bubble_content_img, this.movie_bubble)
-
     }
-
 
     bubble_content_header(title, date, type, author){
 
@@ -485,7 +447,7 @@ class TimelineBubble extends Bubble{
 
     };
 
-    bubble_content_body(imgSrc, type){
+    bubble_content_body(imgSrc, type, article_id){
         this.type = type
         this.movie_bubble_content_body = document.createElement("div");
         this.movie_bubble_content_body.classList.add("timeline_content_body")
@@ -497,6 +459,7 @@ class TimelineBubble extends Bubble{
         if(this.type !=="movie"){
             this.img_container_body = document.createElement("div");
             this.movie_bubble_content_body.appendChild(this.img_container_body )
+            this.img_container_body.classList.add('movie'+article_id.toString())
             this.img_container_body.appendChild(this.img)
         }else{
             this.movie_bubble_content_body.appendChild(this.img)
@@ -530,17 +493,10 @@ class TimelineBubble extends Bubble{
             this.img_article.classList.add("that_article")
             this.img_article.src = "../../images/icons/icon_article-orange.svg"
             this.article_content.appendChild(this.img_article)
-
         }
-
-
-
-
 
         this.web_content = document.createElement("div");
         this.web_content.classList.add("web_container")
-
-
 
         if(url!=""){
             this.link = document.createElement('a')
@@ -551,9 +507,6 @@ class TimelineBubble extends Bubble{
         }else{
             this.movie_bubble_content_footer_container.appendChild(this.web_content)
         }
-
-
-
 
         this.img_web = document.createElement("img")
         this.img_web.classList.add("web")
@@ -569,11 +522,6 @@ class TimelineBubble extends Bubble{
             this.listenOnBubble(this.img_web, this.web_content)
         }
 
-        //this.listenOnBubble(this.img_more, this.web_content) ////
-
-
-
-
         //MOVIE
 
         if(this.type ==="movie") {
@@ -585,9 +533,6 @@ class TimelineBubble extends Bubble{
             this.img_more.src = "../../images/icons/icon_more.svg"
             this.more_content.appendChild(this.img_more)
         }
-
-
-
     }
 
     hideOrDisplayBubble(visibility){
@@ -603,10 +548,9 @@ class TimelineBubble extends Bubble{
     }
 
 
-
-
-
-
+    changeIndex(bubble, value){
+        bubble.style.zIndex = value
+    }
 }
 
 class Description extends Bubble{
@@ -614,8 +558,8 @@ class Description extends Bubble{
         super()
         //this.position = position
         this.description_bubble = document.createElement('div')
-        this.description_bubble.style.left= position + 200 +"px"
-        this.description_bubble.style.top = "300px";
+        this.description_bubble.style.left= position + 50 +"px"
+        this.description_bubble.style.top = "500px";
         this.description_bubble.classList.add('description_bubble')
         timelineContainer.appendChild(this.description_bubble)
 
@@ -629,22 +573,15 @@ class Description extends Bubble{
         this.description_bubble_content_img = document.createElement("div");
         this.description_bubble_content_img.classList.add("img_container")
         this.description_bubble_content_header.appendChild(this.description_bubble_content_img)
-
-
         this.img_close = document.createElement("img")
         this.img_close.src = "../../images/icons/icon_close.svg"
         this.img_close.classList.add("close")
 
         this.description_bubble_content_img.classList.add("img_container")
-
         this.description_bubble_content_img.appendChild(this.img_close)
-
         this.description_text = document.createElement('h2')
-
         this.description_text_content = document.createTextNode(description)
         this.description_text.appendChild(this.description_text_content)
-
-
         this.description_bubble.appendChild(this.description_bubble_content_header)
         this.description_bubble.appendChild(this.description_text)
 
@@ -652,4 +589,3 @@ class Description extends Bubble{
 
     }
 }
-

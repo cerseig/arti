@@ -9,6 +9,10 @@ function animationArti() {
         var happy = new Audio("sounds/happy.wav");
         happy.play();
         $('.arti-robot').attr('src', 'images/arti/arti_anim_2.gif');
+        if($('.arti-event').hasClass('conclusion')) {
+          $('.timeline-container').css('display', 'none')
+          $('.timeline-divider').css('display', 'none')
+        }
     }, 500);
   }).mouseup(function(e) {
       clearTimeout(this.downTimer);

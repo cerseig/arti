@@ -24,6 +24,19 @@
       transform: rotate(180deg);
     }
   }
+  &__conclusion {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 250px;
+    background: rgba(1,0,54,0.8);
+    padding: 40px;
+    text-align: justify;
+    line-height: 25px;
+    p:first-child {
+      margin-top: 0;
+    }
+  }
 }
 .timeline{
   margin: 0;

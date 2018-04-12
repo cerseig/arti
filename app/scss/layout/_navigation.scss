@@ -8,22 +8,9 @@
     background: rgba(1,0,54,0.8);
     padding: 6px 10px;
     border-radius: 8px;
-    .default {
-      display: block;
-    }
-    .hover {
-      display: none;
-    }
+    cursor: pointer;
     img {
       transition: all 0.7s ease;
-    }
-    &:hover {
-      .default {
-        display: none;
-      }
-      .hover {
-        display: block;
-      }
     }
   }
   &__about {
@@ -34,22 +21,9 @@
     background: rgba(1,0,54,0.8);
     padding: 6px 10px 3px 10px;
     border-radius: 8px;
-    .default {
-      display: block;
-    }
-    .hover {
-      display: none;
-    }
+    cursor: pointer;
     img {
       transition: all 0.7s ease;
-    }
-    &:hover {
-      .default {
-        display: none;
-      }
-      .hover {
-        display: block;
-      }
     }
   }
 }

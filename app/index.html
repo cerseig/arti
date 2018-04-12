@@ -17,11 +17,9 @@
 
 <main>
 
-     <button type="button" name="button" class="show-timeline">TIMELINE</button>
-
     <nav class="navigation">
-        <div class="navigation__home"><img class="default" src="images/icons/home.svg" alt=""><img class="hover" src="images/icons/home_hover.svg" alt=""></div>
-        <div class="navigation__about"><img class="default" src="images/icons/about.svg" alt=""><img class="hover" src="images/icons/about_hover.svg" alt=""></div>
+        <div class="navigation__home"><img src="images/icons/home.svg" alt=""></div>
+        <div class="navigation__about"><img src="images/icons/about.svg" alt=""></div>
     </nav>
 
     <div class="about">
@@ -49,6 +47,9 @@
                     best meet the needs of humans, MIT seeks to strike a fair balance between emotion and cognition
                     (psychological activities related to knowledge) in the field of technology design. It must be
                     understood that emotion is in total opposition to cognition.</p>
+            </div>
+            <div class="about__download">
+              <a href="sources/sources.pdf" target="_blank">Download our sources</a>
             </div>
             <p class="about__signature">Made with <span>♥</span> by Mathilde Herard, Noémie Eyoum, Christine Huang et
                 Circé Grand.</p>
@@ -113,8 +114,21 @@
             <div class="timeline" id="test">
                 <div class="timeline-divider"></div>
                 <div class="timeline__arti">
-                    <div class="timeline__arti-event arti-event"></div>
+                    <div class="timeline__arti-event arti-event conclusion"></div>
                     <img class="timeline__arti-robot arti-robot" src="images/arti/arti_anim_5.gif" alt="">
+                </div>
+                <div class="timeline__conclusion">
+                  <img src="images/icons/icon_close-white.svg" alt="" class="timeline__conclusion-close">
+                  <div class="timeline__conclusion-content">
+                    <p>The Affective Computing, also called Artificial Emotional Intelligence is a vast topic  permanently evolving. This phenomenon, protagonist of the 21st century, is in constant evolution. The sources of our watch were inexhaustible, offering us every day new data, articles, inventions ...</p>
+                    <p>This is how we decided to target this subject by relying on the cinema. The 7th art has proved its avant-garde. He constantly deals with affective computing, in many facets and for many years, especially in 1927 with Metropolis by Fritz Lang.</p>
+                    <p>The filmmakers show the affective computing in different days. He can be seen as a nefarious and conspiratorial character such as Agent Smith in Matrix (Lena and Andy Wachowski, 1999). In another category, Affective Computing can be at the beginning docile before becoming counterproductive and destructive to the heroes. This case is supported by the movie 2001: A Space Odyssey (Stanley Kubrick, 1968) with the monotonous and icy robot Hal-9000. The third category explores the impact of man's dream and unconscious on the functioning of artificial intelligence. The latter can then become autonomous and humanize such as "the child machine" in A.I. Artificial Intelligence (Steven Spielberg, 2001). Finally, the CA can be a support, a help to the man. R2D2 (Star Wars A New Hope, 1977 Georges Lucas) remains totally dedicated to its creator, fulfilling its status as a useful tool.</p>
+                    <p>With today's inventions, we notice that reality has caught up with fiction. The examples of the cinema are currently under development or already exist. These 4 categories emit different assumptions for the future. Some support humanity, others go against or even destroy it. How far does Affective Computing get close to real emotions? Will there ever be a sentimental force powerful enough to be self-sufficient? We lie to ourselves trying to give "life" to objects? Is the intimacy of human beings in danger? Many questions that only the future will tell us.</p>
+                    <p class="quote">"I'm afraid of no longer differentiating between true and false. Maybe we are Sims already" - Circe - 2018</p>
+                    <p class="quote">"We already live in the future. I saw that La Gaîté Lyrique was doing implants party "- Noémie - 2018</p>
+                    <p class="quote">"Mmmmh I'm scared the robots will take over. I find it weird to use sex dolls. "- Christine - 2018</p>
+                    <p class="quote">"What will happen when Affective Computers are too clever and become autosuffisant? :/" - Mathilde - 2018</p>
+                  </div>
                 </div>
             </div>
         </div>
@@ -125,16 +139,6 @@
     <script src="js/lib/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.min.js"></script>
     <script src="js/app.js" type="module"></script>
-
-    <script type="text/javascript">
-
-        $('.show-timeline').on('click', function () {
-            $('section').css('display', 'none')
-            $('.timeline__arti').css('position','absolute').css('top', '0');
-        })
-
-
-    </script>
 </main>
 </body>
 </html>

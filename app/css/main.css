@@ -60,17 +60,10 @@ html, body {
     left: 30px;
     background: rgba(1, 0, 54, 0.8);
     padding: 6px 10px;
-    border-radius: 8px; }
-    .navigation__home .default {
-      display: block; }
-    .navigation__home .hover {
-      display: none; }
+    border-radius: 8px;
+    cursor: pointer; }
     .navigation__home img {
       transition: all 0.7s ease; }
-    .navigation__home:hover .default {
-      display: none; }
-    .navigation__home:hover .hover {
-      display: block; }
   .navigation__about {
     position: absolute;
     transition: all 0.7s ease;
@@ -78,17 +71,10 @@ html, body {
     right: 30px;
     background: rgba(1, 0, 54, 0.8);
     padding: 6px 10px 3px 10px;
-    border-radius: 8px; }
-    .navigation__about .default {
-      display: block; }
-    .navigation__about .hover {
-      display: none; }
+    border-radius: 8px;
+    cursor: pointer; }
     .navigation__about img {
       transition: all 0.7s ease; }
-    .navigation__about:hover .default {
-      display: none; }
-    .navigation__about:hover .hover {
-      display: block; }
 
 .about__active .navigation__about {
   right: 410px;
@@ -207,16 +193,38 @@ html {
     transform: rotate(180deg); }
 
 .timeline__conclusion {
+  display: none;
+  width: 500px;
+  height: 300px;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  top: 250px;
+  bottom: -600px;
   background: rgba(1, 0, 54, 0.8);
   padding: 40px;
-  text-align: justify;
-  line-height: 25px; }
+  transition: all 0.5s ease;
+  font-size: 14px; }
+  .timeline__conclusion-content {
+    text-align: justify;
+    line-height: 25px;
+    overflow: scroll;
+    height: 300px; }
+  .timeline__conclusion img {
+    width: 20px;
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    background: rgba(1, 0, 54, 0.8);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer; }
   .timeline__conclusion p:first-child {
     margin-top: 0; }
+  .timeline__conclusion .quote {
+    text-align: center;
+    width: 450px;
+    margin: 20px auto;
+    color: #DBDAEB; }
 
 .timeline {
   margin: 0;
@@ -236,15 +244,15 @@ html {
       top: 100%;
       transform: translateY(-50%);
       width: 5px;
-      height: 25px;
+      height: 35px;
       background-color: #FC6D21;
       transition: all 0.2s ease-in-out; }
       .timeline .timeline-container .marker:hover {
-        height: 50px;
         background-color: #67C0FC; }
       .timeline .timeline-container .marker span {
         position: absolute;
-        transform: translateX(-18px) translateY(-25px); }
+        transform: translateX(-18px) translateY(50px) rotate(-35deg);
+        margin-left: -12px; }
     .timeline .timeline-container .timeline_item {
       color: #423FE9;
       vertical-align: bottom;
@@ -763,7 +771,8 @@ html {
       margin: 0 50px;
       font-family: "IBM Plex Mono";
       font-weight: 600;
-      transition: all 0.3s ease; }
+      transition: all 0.3s ease;
+      cursor: pointer; }
       .introduction__anwsers-buttons button:hover {
         background-color: #423FE9;
         color: #DBDAEB; }

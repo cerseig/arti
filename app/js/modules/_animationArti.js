@@ -9,15 +9,40 @@ function animationArti() {
         var happy = new Audio("sounds/happy.wav");
         happy.play();
         $('.arti-robot').attr('src', 'images/arti/arti_anim_2.gif');
-        if($('.arti-event').hasClass('conclusion')) {
-          $('.timeline-container').css('display', 'none')
-          $('.timeline-divider').css('display', 'none')
-        }
     }, 500);
   }).mouseup(function(e) {
       clearTimeout(this.downTimer);
       $('.arti-robot').attr('src', 'images/arti/arti_anim_1.gif');
   });
+
+  $('.conclusion').mousedown(function(e) {
+    clearTimeout(this.downTimer);
+    this.downTimer = setTimeout(function() {
+        console.log('caresse done');
+        var happy = new Audio("sounds/happy.wav");
+        happy.play();
+        $('.arti-robot').attr('src', 'images/arti/arti_anim_2.gif');
+        setTimeout(function() {
+            $('.timeline__conclusion').css('bottom', '50px')
+        }, 800);
+        $('.timeline-container').css('display', 'none')
+        $('.timeline-divider').css('display', 'none')
+        $('.timeline__conclusion').css('display', 'block')
+    }, 500);
+  }).mouseup(function(e) {
+      clearTimeout(this.downTimer);
+      $('.arti-robot').attr('src', 'images/arti/arti_anim_1.gif');
+  });
+
+
+  $('.timeline__conclusion').on('click', function() {
+    $(this).css('bottom', '-600px')
+    setTimeout(function() {
+        $(this).css('display','none');
+        $('.timeline-container').css('display', 'block')
+        $('.timeline-divider').css('display', 'block')
+    }, 800);
+  })
 
   var timeout;
   document.onmousemove = function(){

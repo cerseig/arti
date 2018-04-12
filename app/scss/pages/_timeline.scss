@@ -149,6 +149,7 @@
           padding-left:10px;
         }
         .img_container {
+          cursor: pointer;
           display: inline-block;
           float: right;
           padding: 9px;
@@ -200,7 +201,7 @@
         p {
           height: 110px;
           padding: 0 18px;
-          text-align: justify;
+          //text-align: justify;
           display: -webkit-box;
           -webkit-line-clamp: 5;
           -webkit-box-orient: vertical;
@@ -217,6 +218,7 @@
           border-radius: 0 0 5px 5px;
 
           .article_content, .more_content, .web_container{
+            cursor: pointer;
             width: 60px;
             height: 60px;
             vertical-align: middle;
@@ -244,7 +246,11 @@
           }
 
           .more_content{
+
             border-left: solid 2.5px $color-orange;
+            img{
+              top: 28%;
+            }
           }
 
           .web_container{
@@ -310,6 +316,7 @@
 
 
         .img_container {
+          cursor: pointer;
           display: inline-block;
           float: right;
           padding: 9px;
@@ -371,13 +378,59 @@
           div, p{
             display: inline-block;
           }
+
+
+          .movie1{
+            background: no-repeat url(/images/movies/vocal_ass_a2.jpg) center center transparent;
+            background-size: cover;
+          }
+          .movie2{
+            background: no-repeat url(/images/movies/artificial_con_a.jpg) center center transparent;
+            background-size: cover;
+          }
+          .movie3{
+            background: no-repeat url(/images/movies/emotion_exp_a.jpg) center center transparent;
+            background-size: cover;
+          }
+          .movie4{
+            background: no-repeat url(/images/movies/face_rec_a1.jpg) center center transparent;
+            background-size: cover;
+          }
+          .movie5{
+             background: no-repeat url(/images/movies/humanoid_rob_a.jpg) center center transparent;
+            background-size: cover;
+          }
+          .movie6{
+             background: no-repeat url(/images/movies/physical_ass_a.jpg) center center transparent;
+            background-size: cover;
+          }
+          .movie7{
+             background: no-repeat url(/images/movies/computer_gam_a.jpg) center center transparent;
+            background-size: cover;
+          }
+          .movie8{
+            background: no-repeat url(/images/movies/vocal_ass_bis_a.jpg) center center transparent;
+            background-size: cover;
+          }
+          .movie9{
+            background: no-repeat url(/images/movies/sex_doll_a.jpg) center center transparent;
+            background-size: cover;
+          }
+
+
           div{
             overflow: hidden;
             width: 169px;
+            height: 232px;
+
+            position: absolute;
+            top:46px;
 
             img{
+              display: none;
               width: 100%;
               height: auto;
+
             }
           }
 
@@ -385,6 +438,8 @@
             width: 330px;
             display: inline-block;
             padding: 0 17px;
+            padding-left: 185px;
+            //text-align: justify;
 
           }
       }
@@ -394,7 +449,9 @@
           border-bottom: 3px solid $color-blue-light;
           border-right: 3px solid $color-blue-light;
           border-radius: 0 0 5px 5px ;
+
           .web_container{
+            cursor: pointer;
             margin: 0;
             vertical-align: middle;
             width: 60px;
@@ -481,7 +538,7 @@
         color: $color-text;
         font-size: 14px;
         width:92%;
-        text-align: justify;
+        //text-align: justify;
       }
 
     }

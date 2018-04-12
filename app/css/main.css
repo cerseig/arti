@@ -317,6 +317,7 @@ html {
           white-space: nowrap;
           padding-left: 10px; }
         .timeline .timeline-container .timeline_item.movie .timeline_content_header .img_container {
+          cursor: pointer;
           display: inline-block;
           float: right;
           padding: 9px;
@@ -357,7 +358,6 @@ html {
         .timeline .timeline-container .timeline_item.movie .timeline_content_body p {
           height: 110px;
           padding: 0 18px;
-          text-align: justify;
           display: -webkit-box;
           -webkit-line-clamp: 5;
           -webkit-box-orient: vertical;
@@ -370,6 +370,7 @@ html {
         width: 186px;
         border-radius: 0 0 5px 5px; }
         .timeline .timeline-container .timeline_item.movie .timeline_content_footer .timeline_content_footer_container .article_content, .timeline .timeline-container .timeline_item.movie .timeline_content_footer .timeline_content_footer_container .more_content, .timeline .timeline-container .timeline_item.movie .timeline_content_footer .timeline_content_footer_container .web_container {
+          cursor: pointer;
           width: 60px;
           height: 60px;
           vertical-align: middle;
@@ -387,6 +388,8 @@ html {
           border-right: solid 2.5px #FC6D21; }
         .timeline .timeline-container .timeline_item.movie .timeline_content_footer .timeline_content_footer_container .more_content {
           border-left: solid 2.5px #FC6D21; }
+          .timeline .timeline-container .timeline_item.movie .timeline_content_footer .timeline_content_footer_container .more_content img {
+            top: 28%; }
         .timeline .timeline-container .timeline_item.movie .timeline_content_footer .timeline_content_footer_container .web_container {
           margin: 0; }
     .timeline .timeline-container .timeline_item.that_article {
@@ -427,6 +430,7 @@ html {
             white-space: nowrap;
             padding-left: 10px; }
         .timeline .timeline-container .timeline_item.that_article .timeline_content_header .img_container {
+          cursor: pointer;
           display: inline-block;
           float: right;
           padding: 9px;
@@ -468,22 +472,55 @@ html {
         border-bottom: 3px solid #67C0FC; }
         .timeline .timeline-container .timeline_item.that_article .timeline_content_body div, .timeline .timeline-container .timeline_item.that_article .timeline_content_body p {
           display: inline-block; }
+        .timeline .timeline-container .timeline_item.that_article .timeline_content_body .movie1 {
+          background: no-repeat url(/images/movies/vocal_ass_a2.jpg) center center transparent;
+          background-size: cover; }
+        .timeline .timeline-container .timeline_item.that_article .timeline_content_body .movie2 {
+          background: no-repeat url(/images/movies/artificial_con_a.jpg) center center transparent;
+          background-size: cover; }
+        .timeline .timeline-container .timeline_item.that_article .timeline_content_body .movie3 {
+          background: no-repeat url(/images/movies/emotion_exp_a.jpg) center center transparent;
+          background-size: cover; }
+        .timeline .timeline-container .timeline_item.that_article .timeline_content_body .movie4 {
+          background: no-repeat url(/images/movies/face_rec_a1.jpg) center center transparent;
+          background-size: cover; }
+        .timeline .timeline-container .timeline_item.that_article .timeline_content_body .movie5 {
+          background: no-repeat url(/images/movies/humanoid_rob_a.jpg) center center transparent;
+          background-size: cover; }
+        .timeline .timeline-container .timeline_item.that_article .timeline_content_body .movie6 {
+          background: no-repeat url(/images/movies/physical_ass_a.jpg) center center transparent;
+          background-size: cover; }
+        .timeline .timeline-container .timeline_item.that_article .timeline_content_body .movie7 {
+          background: no-repeat url(/images/movies/computer_gam_a.jpg) center center transparent;
+          background-size: cover; }
+        .timeline .timeline-container .timeline_item.that_article .timeline_content_body .movie8 {
+          background: no-repeat url(/images/movies/vocal_ass_bis_a.jpg) center center transparent;
+          background-size: cover; }
+        .timeline .timeline-container .timeline_item.that_article .timeline_content_body .movie9 {
+          background: no-repeat url(/images/movies/sex_doll_a.jpg) center center transparent;
+          background-size: cover; }
         .timeline .timeline-container .timeline_item.that_article .timeline_content_body div {
           overflow: hidden;
-          width: 169px; }
+          width: 169px;
+          height: 232px;
+          position: absolute;
+          top: 46px; }
           .timeline .timeline-container .timeline_item.that_article .timeline_content_body div img {
+            display: none;
             width: 100%;
             height: auto; }
         .timeline .timeline-container .timeline_item.that_article .timeline_content_body p {
           width: 330px;
           display: inline-block;
-          padding: 0 17px; }
+          padding: 0 17px;
+          padding-left: 185px; }
       .timeline .timeline-container .timeline_item.that_article .timeline_content_footer .timeline_content_footer_container {
         border-left: 3px solid #67C0FC;
         border-bottom: 3px solid #67C0FC;
         border-right: 3px solid #67C0FC;
         border-radius: 0 0 5px 5px; }
         .timeline .timeline-container .timeline_item.that_article .timeline_content_footer .timeline_content_footer_container .web_container {
+          cursor: pointer;
           margin: 0;
           vertical-align: middle;
           width: 60px;
@@ -540,8 +577,7 @@ html {
         margin-left: 18px;
         color: #423FE9;
         font-size: 14px;
-        width: 92%;
-        text-align: justify; }
+        width: 92%; }
   .timeline .close {
     width: 20px;
     height: auto;

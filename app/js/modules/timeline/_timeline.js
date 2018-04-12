@@ -294,7 +294,7 @@ class TimelineMarker {
             article.author.toString(),
             article.articleId
         )
-        this.bubble.listenOnBubble(this.bubble.img_article, this.article.movie_bubble)
+        this.bubble.listenOnBubble(this.bubble.article_content, this.article.movie_bubble)
     }
 
     listenOnMarker(bubble){
@@ -321,7 +321,7 @@ class Bubble{
                     zIndex++;
                     el.style.zIndex =zIndex
                     break
-                case "web":
+                case "article_content":
                     //put a change classe function
 
                     el.style.opacity = "1"

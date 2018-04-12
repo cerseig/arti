@@ -12,7 +12,7 @@ function animationArti() {
     }, 500);
   }).mouseup(function(e) {
       clearTimeout(this.downTimer);
-      $('.arti-robot').attr('src', 'images/arti/arti_anim_1.gif');
+      $('.arti-robot').attr('src', 'images/arti/arti_anim_5.gif');
   });
 
   $('.conclusion').mousedown(function(e) {
@@ -31,7 +31,7 @@ function animationArti() {
     }, 500);
   }).mouseup(function(e) {
       clearTimeout(this.downTimer);
-      $('.arti-robot').attr('src', 'images/arti/arti_anim_1.gif');
+      $('.arti-robot').attr('src', 'images/arti/arti_anim_5.gif');
   });
 
 

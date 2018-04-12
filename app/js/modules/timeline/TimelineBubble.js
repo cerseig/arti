@@ -34,7 +34,7 @@ var bubble = function() {
     this.movie_bubble_content_header.appendChild(this.movie_bubble_content_img)
 
     this.img_close = document.createElement("img")
-    this.img_close.src = "../../images/icons/icon_close.svg"
+    this.img_close.src = "images/icons/icon_close.svg"
     this.movie_bubble_content_img.appendChild(this.img_close)
 
 
@@ -45,7 +45,7 @@ var bubble = function() {
     this.movie_bubble_content.appendChild(this.movie_bubble_content_body)
 
     this.img = document.createElement("img")
-    this.img.src = "../../images/movies/oz_SummerWars.jpg" // TO DO ...
+    this.img.src = "images/movies/oz_SummerWars.jpg" // TO DO ...
     this.movie_bubble_content_body.appendChild(this.img)
 
     this.summary = document.createElement("p")
@@ -70,7 +70,7 @@ var bubble = function() {
 
     this.img_more = document.createElement("img")
     this.img_more.classList.add("more")
-    this.img_more.src = "../../images/icons/icon_more.svg"
+    this.img_more.src = "images/icons/icon_more.svg"
     this.more_content.appendChild(this.img_more)
 
     this.web_content = document.createElement("div");
@@ -79,7 +79,7 @@ var bubble = function() {
 
     this.img_web = document.createElement("img")
     this.img_web.classList.add("web")
-    this.img_web.src = "../../images/icons/icon_web.svg"
+    this.img_web.src = "images/icons/icon_web.svg"
     this.web_content.appendChild(this.img_web)
 
 }

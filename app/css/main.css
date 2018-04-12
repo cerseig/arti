@@ -163,7 +163,7 @@ html {
       border-radius: 5px;
       background-color: #DBDAEB;
       color: #423FE9;
-      font-family: "IBM Plex Mono";
+      font-family: 'ibm_plex_monoregular';
       font-size: 18px;
       font-weight: 600;
       line-height: 25px;
@@ -699,7 +699,7 @@ html {
     background-color: #DBDAEB;
     padding: 20px;
     color: #423FE9;
-    font-family: "IBM Plex Mono";
+    font-family: 'ibm_plex_monoregular';
     font-size: 14px;
     font-weight: 600;
     position: absolute;
@@ -739,7 +739,7 @@ html {
     width: 200px;
     padding: 20px;
     color: #423FE9;
-    font-family: "IBM Plex Mono";
+    font-family: 'ibm_plex_monoregular';
     font-size: 14px;
     font-weight: 600;
     position: absolute;
@@ -815,7 +815,7 @@ html {
       color: #423FE9;
       border-radius: 5px;
       margin: 0 50px;
-      font-family: "IBM Plex Mono";
+      font-family: 'ibm_plex_monoregular';
       font-weight: 600;
       transition: all 0.3s ease;
       cursor: pointer; }

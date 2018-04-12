@@ -56,7 +56,7 @@
       background-color: $color-gray-light;
       padding: 20px;
       color: $color-blue-purple;
-      font-family: "IBM Plex Mono";
+      font-family: 'ibm_plex_monoregular';
       font-size: 14px;
       font-weight: 600;
       position: absolute;
@@ -99,7 +99,7 @@
       width: 200px;
       padding: 20px;
       color: $color-blue-purple;
-      font-family: "IBM Plex Mono";
+      font-family: 'ibm_plex_monoregular';
       font-size: 14px;
       font-weight: 600;
       position: absolute;
@@ -185,7 +185,7 @@
         color: $color-blue-purple;
         border-radius: 5px;
         margin: 0 50px;
-        font-family: "IBM Plex Mono";
+        font-family: 'ibm_plex_monoregular';
         font-weight: 600;
         transition: all 0.3s ease;
         cursor: pointer;

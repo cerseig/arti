@@ -9,6 +9,17 @@
   top: 0;
   padding: 30px;
   overflow-y: scroll;
+  &__download {
+    margin: 50px 0;
+    cursor: pointer;
+    text-align: center;
+    &-link {
+      text-transform: uppercase;
+      color: $color-white;
+      text-decoration: none;
+      font-size: 12px;
+    }
+  }
   &__paragraph {
     h1 {
       margin: 0;

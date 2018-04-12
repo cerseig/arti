@@ -108,6 +108,15 @@ html {
   top: 0;
   padding: 30px;
   overflow-y: scroll; }
+  .about__download {
+    margin: 50px 0;
+    cursor: pointer;
+    text-align: center; }
+    .about__download-link {
+      text-transform: uppercase;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 12px; }
   .about__paragraph h1 {
     margin: 0;
     padding: 0;

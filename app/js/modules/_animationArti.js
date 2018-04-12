@@ -38,7 +38,7 @@ function animationArti() {
   $('.timeline__conclusion').on('click', function() {
     $(this).css('bottom', '-600px')
     setTimeout(function() {
-        $(this).css('display','none');
+        $('.timeline__conclusion').css('display','none');
         $('.timeline-container').css('display', 'block')
         $('.timeline-divider').css('display', 'block')
     }, 800);
